@@ -52,3 +52,74 @@
   margin-left: 12px;
   font-family: $font-family;
 }
+
+.contentText {
+  width: 608px;
+  height: 518px;
+  margin: 80px 104px;
+}
+
+.contentTitle {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $color-text-white;
+}
+
+.contentDescription {
+  margin-top: 32px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contentButtons {
+  margin-top: 32px;
+}
+
+.contenBtnWork {
+  width: 269px;
+  height: 56px;
+  background: $color-orange;
+  border-radius: 64px;
+  border: none;
+
+  color: $color-text-white;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:active {
+    transform: translateY(3px);
+  }
+}
+
+.contentBtnBild {
+  margin-left: 24px;
+  width: 211px;
+  height: 56px;
+  background: transparent;
+  border-radius: 64px;
+  border: 1px solid #fff;
+
+  color: $color-text-white;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:active {
+    transform: translateY(3px);
+  }
+}

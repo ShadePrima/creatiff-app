@@ -25,6 +25,25 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        <div className={styles.content}>
+          <div className={styles.contentText}>
+            <div className={styles.contentTitle}>
+              Загально - будівельні роботи ВІД CREATIFF
+            </div>
+            <div className={styles.contentDescription}>
+              Тут буде текст про те, яка в нас класна компанія, який в нас
+              великий спектр послуг, та що прям зараз ви можете замовити роботу,
+              та замовити модульний будинок, меблі
+            </div>
+            <div className={styles.contentButtons}>
+              <button className={styles.contenBtnWork}>Замовити роботу</button>
+              <button className={styles.contentBtnBild}>Хочу будинок</button>
+            </div>
+            <div className={styles.contentInfo}></div>
+          </div>
+          <div className={styles.contentImg}></div>
+        </div>
       </div>
     </header>
   );

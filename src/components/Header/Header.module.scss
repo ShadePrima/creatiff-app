@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.root {
+  height: 744px;
+  max-width: 100%;
+  //   background-color: $background;
+  background-image: url('../../assets/background/Background.png');
+  background-size: cover;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1232px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 104px;
+}
+
+.logoItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoTitle {
+  color: $color-text-white;
+  margin-left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.contactText {
+  color: $color-text-white;
+  margin-left: 12px;
+  font-family: $font-family;
+}

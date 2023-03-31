@@ -1,0 +1,21 @@
+.root {
+  margin-top: 72px;
+
+  .container {
+    display: flex;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    text-transform: capitalize;
+    color: rgba(21, 19, 42, 0.5);
+  }
+
+  img {
+    margin-top: 32px;
+    opacity: 0.4;
+    margin-right: 12px;
+  }
+}

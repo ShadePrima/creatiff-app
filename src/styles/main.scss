@@ -1,6 +1,11 @@
 @import './variables';
 @import './libs/normalize';
 
-body {
+* {
   font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1232px;
 }

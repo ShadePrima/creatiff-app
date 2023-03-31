@@ -6,10 +6,10 @@ import styles from './Header.module.scss';
 import logoIcon from '../../assets/icons/Logo.png';
 import logoEmail from '../../assets/icons/Email.png';
 import logoTelephone from '../../assets/icons/Telephone.png';
-
 import nineIcon from '../../assets/Numbers/nine-plus.png';
 import twoIcon from '../../assets/Numbers/two-plus.png';
 import twentyIcon from '../../assets/Numbers/twenty-plus.png';
+import imgBkg from '../../assets/background/header-img.png';
 
 const numberObj = [
   { id: 1, icon: nineIcon, text: 'Щасливих Клієнтів' },
@@ -54,7 +54,9 @@ const Header = () => {
             </div>
             <Numbers items={numberObj} />
           </div>
-          <div className={styles.contentImg}></div>
+          <div className={styles.contentImg}>
+            <img src={imgBkg} alt='Header Item' />
+          </div>
         </div>
       </div>
     </header>

@@ -123,3 +123,17 @@
     transform: translateY(3px);
   }
 }
+
+.contentInfo {
+  width: 100px;
+  height: 120px;
+
+  h1 {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: $color-text-white;
+  }
+}

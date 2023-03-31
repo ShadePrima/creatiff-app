@@ -1,9 +1,21 @@
 import React from 'react';
 
+import Numbers from '../Numbers';
+
 import styles from './Header.module.scss';
-import logoIcon from '../../assets/icon/Logo.png';
-import logoEmail from '../../assets/icon/Email.png';
-import logoTelephone from '../../assets/icon/Telephone.png';
+import logoIcon from '../../assets/icons/Logo.png';
+import logoEmail from '../../assets/icons/Email.png';
+import logoTelephone from '../../assets/icons/Telephone.png';
+
+import nineIcon from '../../assets/Numbers/nine-plus.png';
+import twoIcon from '../../assets/Numbers/two-plus.png';
+import twentyIcon from '../../assets/Numbers/twenty-plus.png';
+
+const numberObj = [
+  { id: 1, icon: nineIcon, text: 'Щасливих Клієнтів' },
+  { id: 2, icon: twoIcon, text: 'Меблів Продано' },
+  { id: 3, icon: twentyIcon, text: 'Збудованих конструкцій' },
+];
 
 const Header = () => {
   return (
@@ -40,7 +52,7 @@ const Header = () => {
               <button className={styles.contenBtnWork}>Замовити роботу</button>
               <button className={styles.contentBtnBild}>Хочу будинок</button>
             </div>
-            <div className={styles.contentInfo}></div>
+            <Numbers items={numberObj} />
           </div>
           <div className={styles.contentImg}></div>
         </div>

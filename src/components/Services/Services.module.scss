@@ -3,6 +3,11 @@
 .root {
   margin-top: 72px;
 
+  .mainBlock {
+    display: flex;
+    gap: 16px;
+  }
+
   .leftBlock {
     width: 400px;
     height: 568px;
@@ -29,5 +34,13 @@
 
   .arrow {
     margin-top: 136px;
+  }
+
+  .rightBlock {
+    width: 816px;
+    height: 568px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 }

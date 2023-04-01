@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.root {
+  width: 400px;
+  height: 276px;
+  padding: 24px 20px 24px 24px;
+  border: 1.5px solid rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+
+  .circle {
+    width: 48px;
+    height: 48px;
+    background-color: $color-orange;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: $color-text-white;
+  }
+
+  .title {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: $color-text-black;
+  }
+
+  .description {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-text-black;
+  }
+}

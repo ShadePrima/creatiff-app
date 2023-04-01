@@ -17,11 +17,13 @@ const Partners = () => {
       <div className={`${'wrapper'} ${styles.container}`}>
         <div>
           <p>Наші Партнери:</p>
-          {partners.map((partner) => (
-            <div key={partner.id}>
-              <img src={partner.icone} alt={partner.name} />
-            </div>
-          ))}
+          <div className={styles.flexContainer}>
+            {partners.map((partner) => (
+              <div key={partner.id}>
+                <img src={partner.icone} alt={partner.name} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

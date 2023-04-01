@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.root {
+  margin-top: 72px;
+
+  .leftBlock {
+    width: 400px;
+    height: 568px;
+    padding: 40px 24px;
+    background: linear-gradient(90deg, #7eb547 0%, #668333 100%);
+    border-radius: 8px;
+  }
+
+  .title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: $color-text-white;
+  }
+
+  .description {
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: $color-text-white;
+  }
+
+  .arrow {
+    margin-top: 136px;
+  }
+}

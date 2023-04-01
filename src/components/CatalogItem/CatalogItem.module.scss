@@ -1,0 +1,29 @@
+.catalogItem {
+  margin-top: 24px;
+  width: 712px;
+  height: 64px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+
+  .leftConteiner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .catalogTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .catalogDescription {
+    margin-top: 12px;
+  }
+}

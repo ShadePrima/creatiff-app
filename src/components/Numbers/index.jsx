@@ -6,7 +6,7 @@ const Numbers = ({ items }) => {
   return (
     <div className={styles.root}>
       {items.map((obj) => (
-        <div className={styles.wrapper}>
+        <div key={obj.id} className={styles.wrapper}>
           <img src={obj.icon} alt={obj.text} />
           <p>{obj.text}</p>
         </div>

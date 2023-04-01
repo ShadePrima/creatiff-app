@@ -2,8 +2,15 @@
 $black: #232323;
 $background: #1e1e1e;
 $color-orange: #ed6e38;
-$color-text-black: #15132a;
-$color-text-white: #fff;
 
 //text
 $font-family: 'Inter', sans-serif;
+$color-text-black: #15132a;
+$color-text-white: #fff;
+$text-color-description: rgba(21, 19, 42, 0.75);
+
+//element
+$border: 1px solid rgba(0, 0, 0, 0.13);
+
+//margin
+$margin-section: 72px;

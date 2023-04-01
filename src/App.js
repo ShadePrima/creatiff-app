@@ -1,3 +1,4 @@
+import Catalog from './components/Catalog';
 import Header from './components/Header';
 import Partners from './components/Partners';
 import Services from './components/Services';
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Partners />
       <Services />
+      <Catalog />
     </div>
   );
 }

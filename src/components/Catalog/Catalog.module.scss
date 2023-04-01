@@ -1,0 +1,41 @@
+@import './../../styles/variables';
+
+.root {
+  margin-top: $margin-section;
+
+  .container {
+    display: flex;
+  }
+
+  .image {
+    width: 465px;
+    height: 674px;
+  }
+
+  .catalog {
+    margin-left: 55px;
+    width: 712px;
+    height: 594px;
+
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 125%;
+      color: $color-text-black;
+    }
+
+    .description {
+      margin-top: 32px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      color: $text-color-description;
+    }
+
+    .catalogItems {
+      margin-top: 48px;
+      width: 712px;
+      height: 354px;
+    }
+  }
+}

@@ -49,6 +49,7 @@ const Services = () => {
           <div className={styles.rightBlock}>
             {infoCardObj.map((obj) => (
               <InfoCard
+                key={obj.id}
                 id={obj.id}
                 title={obj.title}
                 description={obj.description}

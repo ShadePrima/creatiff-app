@@ -18,9 +18,9 @@ const Partners = () => {
         <div>
           <p>Наші Партнери:</p>
           {partners.map((partner) => (
-            <>
+            <div key={partner.id}>
               <img src={partner.icone} alt={partner.name} />
-            </>
+            </div>
           ))}
         </div>
       </div>

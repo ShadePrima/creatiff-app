@@ -28,9 +28,9 @@ const Advantages = () => {
           </p>
           <div className={styles.list}>
             {list.map((obj) => (
-              <div className={styles.listItem}>
-                <img src={heartIcon} alt='Heart' />
-                <p>Якість та гарантії</p>
+              <div key={obj.id} className={styles.listItem}>
+                <img src={obj.icone} alt={obj.title} />
+                <p>{obj.title}</p>
               </div>
             ))}
           </div>

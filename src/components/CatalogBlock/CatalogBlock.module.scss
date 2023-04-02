@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.root {
+  margin-top: $margin-section;
+  height: 280px;
+  background: $background-radial-black;
+
+  h1 {
+    @include titleWhite1;
+    padding-top: 48px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .button {
+    width: 308px;
+    height: 56px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin-top: 16px;
+    text-align: center;
+    @include textWhite1;
+  }
+
+  span {
+    color: $color-orange;
+  }
+}

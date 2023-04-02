@@ -1,6 +1,11 @@
 //colors
 $black: #232323;
 $background: #1e1e1e;
+$background-radial-black: radial-gradient(
+  100% 374.61% at 0% 0%,
+  #3d3d3d 0%,
+  #0f0f0f 42.19%
+);
 $color-orange: #ed6e38;
 
 //text
@@ -14,3 +19,69 @@ $border: 1px solid rgba(0, 0, 0, 0.13);
 
 //margin
 $margin-section: 72px;
+
+//mixin
+
+@mixin titleWhite1() {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $color-text-white;
+}
+
+@mixin titleWhite2() {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 125%;
+  color: $color-text-white;
+}
+
+@mixin titleWhite3() {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-text-white;
+}
+
+@mixin titleBlack1() {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: $color-text-black;
+}
+
+@mixin titleBlack2() {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: $color-text-black;
+}
+
+@mixin titleBlack3() {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-text-black;
+}
+
+@mixin titleGray1() {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: $text-color-description;
+}
+
+@mixin textGray1() {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: $text-color-description;
+}
+
+@mixin textWhite1() {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-text-white;
+}

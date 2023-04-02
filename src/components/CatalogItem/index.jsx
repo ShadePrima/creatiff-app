@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import cx from 'clsx';
 
 import catalogCheckTop from '../../assets/icons/check-top-icon.png';
@@ -6,9 +6,15 @@ import catalogCheckBottom from '../../assets/icons/check-bottom-icon.png';
 import catalogIcon from '../../assets/icons/icon-background.png';
 
 import styles from './CatalogItem.module.scss';
+import autoAnimate from '@formkit/auto-animate';
 
 const CatalogItem = ({ id, title, handleMoreClick, isActive }) => {
-  console.log(isActive, 'isActive');
+  const parent = React.useRef(null);
+
+  React.useEffect(() => {
+    parent.current && autoAnimate(parent.current);
+  }, [parent]);
+
   return (
     <div
       onClick={() => handleMoreClick(id)}
@@ -16,7 +22,7 @@ const CatalogItem = ({ id, title, handleMoreClick, isActive }) => {
     >
       <div className={styles.leftConteiner}>
         <img src={catalogIcon} alt='Icon' className={styles.catalogIcon} />
-        <div className={cx(isActive && styles.titleConteiner)}>
+        <div ref={parent} className={cx(isActive && styles.titleConteiner)}>
           <div className={styles.catalogTitle}>{title}</div>
           {isActive && (
             <p className={styles.catalogDescription}>

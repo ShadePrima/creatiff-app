@@ -8,7 +8,7 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 
   border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 4px;
@@ -17,7 +17,7 @@
 
   .leftConteiner {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 24px;
   }
 
@@ -41,6 +41,10 @@
 }
 
 .openItem {
-  height: 90px;
-  padding-bottom: 40px;
+  height: 104px;
+  // padding-bottom: 45px;
+
+  .titleConteiner {
+    margin-top: 0px;
+  }
 }

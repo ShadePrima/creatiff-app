@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Partners from './components/Partners';
 import Services from './components/Services';
 import './styles/main.scss';
+import Dropdown from './ui/Dropdown/Dropdown';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Catalog />
       <CataloBlock />
       <Advantages />
+      <Dropdown />
     </div>
   );
 }

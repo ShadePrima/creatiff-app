@@ -1,3 +1,4 @@
+import Advantages from './components/Advantages';
 import Catalog from './components/Catalog';
 import CataloBlock from './components/CatalogBlock';
 import Header from './components/Header';
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <Catalog />
       <CataloBlock />
+      <Advantages />
     </div>
   );
 }

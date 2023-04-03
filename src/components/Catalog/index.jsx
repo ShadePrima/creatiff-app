@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Catalog.module.scss';
 import catalogPhoto from '../../assets/background/catalog.png';
 import CatalogItem from '../CatalogItem';
+import autoAnimate from '@formkit/auto-animate';
 
 const catalogList = [
   {
@@ -31,6 +32,11 @@ const catalogList = [
 
 const Catalog = () => {
   const [acitveIndex, setActiveIndex] = React.useState(1);
+  const parent = React.useRef(null);
+
+  React.useEffect(() => {
+    parent.current && autoAnimate(parent.current);
+  }, [parent]);
 
   const handleMoreClick = (id) => {
     setActiveIndex(id);
@@ -50,7 +56,7 @@ const Catalog = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
-            <div className={styles.catalogItems}>
+            <div ref={parent} className={styles.catalogItems}>
               {catalogList.map((obj) => (
                 <CatalogItem
                   key={obj.id}

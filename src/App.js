@@ -1,11 +1,14 @@
+import React from 'react';
+
 import Advantages from './components/Advantages';
 import Catalog from './components/Catalog';
 import CataloBlock from './components/CatalogBlock';
+import ContactForm from './components/ContactForm';
 import Header from './components/Header';
 import Partners from './components/Partners';
 import Services from './components/Services';
+
 import './styles/main.scss';
-import Dropdown from './ui/Dropdown/Dropdown';
 
 function App() {
   return (
@@ -16,7 +19,7 @@ function App() {
       <Catalog />
       <CataloBlock />
       <Advantages />
-      <Dropdown />
+      <ContactForm />
     </div>
   );
 }

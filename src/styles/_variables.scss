@@ -16,9 +16,11 @@ $text-color-description: rgba(21, 19, 42, 0.75);
 
 //element
 $border: 1px solid rgba(0, 0, 0, 0.13);
+$border-grey: 1px solid rgba(255, 255, 255, 0.25);
 
 //margin
 $margin-section: 72px;
+$margin32: 32px;
 
 //mixin
 
@@ -77,6 +79,13 @@ $margin-section: 72px;
   font-size: 20px;
   line-height: 150%;
   color: $text-color-description;
+}
+
+@mixin textGray2() {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  color: rgba(21, 19, 42, 0.5);
 }
 
 @mixin textWhite1() {

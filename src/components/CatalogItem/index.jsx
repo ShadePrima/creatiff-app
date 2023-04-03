@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import cx from 'clsx';
 
 import catalogCheckTop from '../../assets/icons/check-top-icon.png';

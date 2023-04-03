@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'clsx';
 
-import catalogCheckTop from '../../assets/icons/check-top-icon.png';
-import catalogCheckBottom from '../../assets/icons/check-bottom-icon.png';
+import catalogCheckTop from '../../assets/icons/check-top-icon.svg';
+import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg';
 import catalogIcon from '../../assets/icons/icon-background.png';
 
 import styles from './CatalogItem.module.scss';

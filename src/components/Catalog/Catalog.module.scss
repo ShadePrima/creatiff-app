@@ -39,3 +39,75 @@
     }
   }
 }
+
+.catalogItem {
+  margin-top: 24px;
+  width: 712px;
+  height: 64px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  .leftConteiner {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+  }
+
+  .titleConteiner {
+    margin-top: 25px;
+  }
+
+  .catalogTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+
+.panelOpen {
+  margin-top: 24px;
+  width: 712px;
+  height: 104px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  .leftConteiner {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+  }
+
+  .titleConteiner {
+    margin-top: 4px;
+  }
+
+  .catalogTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .panelDescription {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $text-color-description;
+  }
+}

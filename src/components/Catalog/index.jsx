@@ -3,6 +3,10 @@ import styles from './Catalog.module.scss';
 import catalogPhoto from '../../assets/background/catalog.png';
 import CatalogItem from '../CatalogItem';
 import autoAnimate from '@formkit/auto-animate';
+import clsx from 'clsx';
+import catalogCheckTop from '../../assets/icons/check-top-icon.svg';
+import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg';
+import catalogIcon from '../../assets/icons/icon-background.png';
 
 const catalogList = [
   {
@@ -33,6 +37,7 @@ const catalogList = [
 const Catalog = () => {
   const [acitveIndex, setActiveIndex] = React.useState(1);
   const parent = React.useRef(null);
+  console.log(acitveIndex, 'activeIndex');
 
   React.useEffect(() => {
     parent.current && autoAnimate(parent.current);
@@ -57,7 +62,7 @@ const Catalog = () => {
             </p>
 
             <div ref={parent} className={styles.catalogItems}>
-              {catalogList.map((obj) => (
+              {/* {catalogList.map((obj) => (
                 <CatalogItem
                   key={obj.id}
                   id={obj.id}
@@ -65,7 +70,27 @@ const Catalog = () => {
                   handleMoreClick={handleMoreClick}
                   isActive={acitveIndex === obj.id}
                 />
-              ))}
+              ))} */}
+
+              {catalogList.map((obj) =>
+                acitveIndex === obj.id ? (
+                  <PanelOpen
+                    key={obj.id}
+                    id={obj.id}
+                    title={obj.title}
+                    handleMoreClick={handleMoreClick}
+                    isActive={acitveIndex === obj.id}
+                  />
+                ) : (
+                  <Panel
+                    key={obj.id}
+                    id={obj.id}
+                    title={obj.title}
+                    handleMoreClick={handleMoreClick}
+                    isActive={acitveIndex === obj.id}
+                  />
+                )
+              )}
             </div>
           </div>
         </div>
@@ -73,5 +98,64 @@ const Catalog = () => {
     </div>
   );
 };
+
+function Panel({ id, title, handleMoreClick, isActive }) {
+  return (
+    <div onClick={() => handleMoreClick(id)} className={styles.catalogItem}>
+      <div className={styles.leftConteiner}>
+        <img src={catalogIcon} alt='Icon' className={styles.catalogIcon} />
+        <div>
+          <div className={styles.catalogTitle}>{title}</div>
+        </div>
+      </div>
+      {isActive ? (
+        <img
+          onClick={() => handleMoreClick(id)}
+          src={catalogCheckTop}
+          alt='Check Top'
+          className={styles.catalogCheck}
+        />
+      ) : (
+        <img
+          onClick={() => handleMoreClick(id)}
+          src={catalogCheckBottom}
+          alt='Check Top'
+          className={styles.catalogCheck}
+        />
+      )}
+    </div>
+  );
+}
+
+function PanelOpen({ id, title, handleMoreClick, isActive }) {
+  return (
+    <div onClick={() => handleMoreClick(id)} className={styles.panelOpen}>
+      <div className={styles.leftConteiner}>
+        <img src={catalogIcon} alt='Icon' className={styles.catalogIcon} />
+        <div className={styles.titleConteiner}>
+          <div className={styles.catalogTitle}>{title}</div>
+          <p className={styles.panelDescription}>
+            Серед наших типов вікон маємо: вхідні, міжкімнатні, металопластикові
+          </p>
+        </div>
+      </div>
+      {isActive ? (
+        <img
+          onClick={() => handleMoreClick(id)}
+          src={catalogCheckTop}
+          alt='Check Top'
+          className={styles.catalogCheck}
+        />
+      ) : (
+        <img
+          onClick={() => handleMoreClick(id)}
+          src={catalogCheckBottom}
+          alt='Check Top'
+          className={styles.catalogCheck}
+        />
+      )}
+    </div>
+  );
+}
 
 export default Catalog;

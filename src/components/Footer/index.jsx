@@ -7,10 +7,25 @@ import faceIcon from '../../assets/icons/Facebook.svg';
 import Logo from '../../ui/Logo';
 
 const contacts = [
-  { id: 1, title: 'star.creatiff@gmail.com', icon: emailIcon },
-  { id: 2, title: '951 392 250', icon: phoneIcon },
-  { id: 3, title: 'Instagram', icon: instaIcon },
-  { id: 4, title: 'Facebook', icon: faceIcon },
+  {
+    id: 1,
+    title: 'star.creatiff@gmail.com',
+    icon: emailIcon,
+    link: 'mailto:star.creatiff@gmail.com',
+  },
+  { id: 2, title: '951 392 250', icon: phoneIcon, link: 'tel:951-392-250' },
+  {
+    id: 3,
+    title: 'Instagram',
+    icon: instaIcon,
+    link: 'https://www.instagram.com',
+  },
+  {
+    id: 4,
+    title: 'Facebook',
+    icon: faceIcon,
+    link: 'https://www.facebook.com',
+  },
 ];
 
 const Footer = () => {
@@ -23,7 +38,9 @@ const Footer = () => {
             {contacts.map((contact) => (
               <div key={contact.id} className={styles.contact}>
                 <img src={contact.icon} alt={contact.title} />
-                <p>{contact.title}</p>
+                <p>
+                  <a href={contact.link}>{contact.title}</a>{' '}
+                </p>
               </div>
             ))}
           </div>

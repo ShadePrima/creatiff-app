@@ -12,7 +12,7 @@ const ContactForm = () => {
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.formContainer}>
-          <h1>поговоримо</h1>
+          <h1 id='contactForm'>поговоримо</h1>
           <div className={styles.inputs}>
             <Input type='text' title={nameIcon} placeholder='Остап Бендер' />
             <Input

@@ -28,8 +28,10 @@
   display: flex;
 
   p {
-    margin-left: 12px;
-    @include titleWhite3;
+    a {
+      margin-left: 12px;
+      @include titleWhite3;
+    }
   }
 }
 

@@ -5,6 +5,7 @@ import backgroundImage from '../../assets/Advantages/background.png';
 import heartIcon from '../../assets/Advantages/heart.png';
 import lukasIcon from '../../assets/Advantages/Lukas.png';
 import toolsIcon from '../../assets/Advantages/Tools.png';
+import { scrollToForm } from '../../utils/scrollToForm';
 
 const list = [
   { id: 1, title: 'Якість та гарантії', icone: lukasIcon },
@@ -34,7 +35,7 @@ const Advantages = () => {
               </div>
             ))}
           </div>
-          <div className={styles.button}>
+          <div onClick={scrollToForm} className={styles.button}>
             <Button title='Зв’язатися з нами' />
           </div>
         </div>

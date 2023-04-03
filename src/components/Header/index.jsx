@@ -3,13 +3,14 @@ import React from 'react';
 import Numbers from '../Numbers';
 
 import styles from './Header.module.scss';
-import logoEmail from '../../assets/icons/Email.png';
-import logoTelephone from '../../assets/icons/Telephone.png';
+import logoEmail from '../../assets/icons/Email.svg';
+import logoTelephone from '../../assets/icons/Telephone.svg';
 import nineIcon from '../../assets/Numbers/nine-plus.png';
 import twoIcon from '../../assets/Numbers/two-plus.png';
 import twentyIcon from '../../assets/Numbers/twenty-plus.png';
 import imgBkg from '../../assets/background/header-img.png';
 import Logo from '../../ui/Logo';
+import { scrollToForm } from '../../utils/scrollToForm';
 
 const numberObj = [
   { id: 1, icon: nineIcon, text: 'Щасливих Клієнтів' },
@@ -26,11 +27,17 @@ const Header = () => {
           <div className={styles.contacts}>
             <div className={styles.contact}>
               <img src={logoEmail} alt='Email' />
-              <p className={styles.contactText}>star.creatiff@gmail.com</p>
+              <p className={styles.contactText}>
+                <a href='mailto:star.creatiff@gmail.com'>
+                  star.creatiff@gmail.com
+                </a>
+              </p>
             </div>
             <div className={styles.contact}>
               <img src={logoTelephone} alt='Telefone' />
-              <p className={styles.contactText}>951 392 250</p>
+              <p className={styles.contactText}>
+                <a href='tel:951-392-250'>951 392 250</a>
+              </p>
             </div>
           </div>
         </div>
@@ -46,8 +53,12 @@ const Header = () => {
               та замовити модульний будинок, меблі
             </div>
             <div className={styles.contentButtons}>
-              <button className={styles.contenBtnWork}>Замовити роботу</button>
-              <button className={styles.contentBtnBild}>Хочу будинок</button>
+              <button onClick={scrollToForm} className={styles.contenBtnWork}>
+                Замовити роботу
+              </button>
+              <button onClick={scrollToForm} className={styles.contentBtnBild}>
+                Хочу будинок
+              </button>
             </div>
             <Numbers items={numberObj} />
           </div>

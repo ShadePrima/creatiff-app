@@ -32,9 +32,11 @@
 }
 
 .contactText {
-  color: $color-text-white;
-  margin-left: 12px;
-  font-family: $font-family;
+  a {
+    color: $color-text-white;
+    margin-left: 12px;
+    font-family: $font-family;
+  }
 }
 
 .content {

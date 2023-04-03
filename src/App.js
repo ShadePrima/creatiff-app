@@ -4,6 +4,7 @@ import Advantages from './components/Advantages';
 import Catalog from './components/Catalog';
 import CataloBlock from './components/CatalogBlock';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Partners from './components/Partners';
 import Services from './components/Services';
@@ -20,6 +21,7 @@ function App() {
       <CataloBlock />
       <Advantages />
       <ContactForm />
+      <Footer />
     </div>
   );
 }

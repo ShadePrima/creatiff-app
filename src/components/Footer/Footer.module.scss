@@ -4,3 +4,46 @@
   height: 349px;
   background: #040404;
 }
+
+.container {
+  padding-top: $margin-section;
+  width: 1024px;
+  height: 205px;
+  margin: 0 auto;
+}
+
+.title {
+  @include titleWhite2;
+}
+
+.contacts {
+  margin-top: $margin32;
+  padding-bottom: 32px;
+  display: flex;
+  gap: 113px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.contact {
+  display: flex;
+
+  p {
+    margin-left: 12px;
+    @include titleWhite3;
+  }
+}
+
+.labels {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 418px;
+}
+
+.copyright {
+  @include textWhite2;
+}

@@ -3,13 +3,13 @@ import React from 'react';
 import Numbers from '../Numbers';
 
 import styles from './Header.module.scss';
-import logoIcon from '../../assets/icons/Logo.png';
 import logoEmail from '../../assets/icons/Email.png';
 import logoTelephone from '../../assets/icons/Telephone.png';
 import nineIcon from '../../assets/Numbers/nine-plus.png';
 import twoIcon from '../../assets/Numbers/two-plus.png';
 import twentyIcon from '../../assets/Numbers/twenty-plus.png';
 import imgBkg from '../../assets/background/header-img.png';
+import Logo from '../../ui/Logo';
 
 const numberObj = [
   { id: 1, icon: nineIcon, text: 'Щасливих Клієнтів' },
@@ -22,10 +22,7 @@ const Header = () => {
     <header className={styles.root}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
-          <div className={styles.logoItems}>
-            <img className={styles.logoIcon} src={logoIcon} alt='Logo' />
-            <p className={styles.logoTitle}>Creatiff - realizamos ideas</p>
-          </div>
+          <Logo />
           <div className={styles.contacts}>
             <div className={styles.contact}>
               <img src={logoEmail} alt='Email' />

@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.logoItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.logoTitle {
+  color: $color-text-white;
+  margin-left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}

@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .root {
-  height: 744px;
+  min-height: 744px;
   max-width: 100%;
   //   background-color: $background;
   background-image: url('../../assets/background/Background.png');
@@ -18,6 +18,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 32px 0;
+
+  @media (max-width: 1240px) {
+    & {
+      padding: 0 200px;
+    }
+  }
+
+  @media (max-width: 1229px) {
+    & {
+      padding-top: $margin32;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
 }
 
 .contacts {
@@ -42,12 +57,30 @@
 .content {
   display: flex;
   margin-top: 48px;
+
+  @media (max-width: 1240px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
 }
 
 .contentText {
   width: 608px;
   height: 518px;
   margin-right: 114px;
+
+  @media (max-width: 1240px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
 }
 
 .contentTitle {
@@ -134,5 +167,11 @@
   img {
     width: 520px;
     height: 670px;
+  }
+
+  @media (max-width: 1240px) {
+    & {
+      margin-top: $margin32;
+    }
   }
 }

@@ -7,6 +7,13 @@
   display: flex;
   gap: 64px;
 
+  @media (max-width: 1240px) {
+    & {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;

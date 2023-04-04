@@ -16,7 +16,7 @@ const Partners = () => {
     <div className={styles.root}>
       <div className={`${'wrapper'} ${styles.container}`}>
         <div>
-          <p>Наші Партнери:</p>
+          <p className={styles.title}>Наші Партнери:</p>
           <div className={styles.flexContainer}>
             {partners.map((partner) => (
               <div key={partner.id}>

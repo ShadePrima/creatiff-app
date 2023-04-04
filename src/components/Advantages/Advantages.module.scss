@@ -2,12 +2,14 @@
 
 .root {
   margin-top: $margin-section;
-  height: 570px;
+  min-height: 570px;
 }
 
 .flexContainer {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .content {
@@ -21,6 +23,19 @@
   .contentText {
     margin-top: 32px;
     @include textGray1;
+  }
+
+  @media (max-width: 1240px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1,
+      p {
+        text-align: center;
+      }
+    }
   }
 }
 

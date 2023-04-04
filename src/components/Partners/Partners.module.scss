@@ -7,6 +7,14 @@
 
   .flexContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 1240px) {
+    .title {
+      text-align: center;
+    }
   }
 
   p {

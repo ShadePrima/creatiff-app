@@ -19,11 +19,11 @@
   align-items: center;
   padding: 32px 0;
 
-  @media (max-width: 1240px) {
-    & {
-      padding: 0 200px;
-    }
-  }
+  // @media (max-width: 1240px) {
+  //   & {
+  //     padding: 0 200px;
+  //   }
+  // }
 
   @media (max-width: 1229px) {
     & {
@@ -37,6 +37,8 @@
 
 .contacts {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .contact {
@@ -68,8 +70,8 @@
 }
 
 .contentText {
-  width: 608px;
-  height: 518px;
+  max-width: 608px;
+  min-height: 518px;
   margin-right: 114px;
 
   @media (max-width: 1240px) {
@@ -81,10 +83,14 @@
       margin-right: 0;
     }
   }
+
+  @media (max-width: 425px) {
+    max-width: 268px;
+  }
 }
 
 .contentTitle {
-  width: 608px;
+  max-width: 608px;
   font-family: $font-family;
   font-weight: 700;
   font-size: 48px;
@@ -100,10 +106,19 @@
   font-size: 20px;
   line-height: 150%;
   color: rgba(255, 255, 255, 0.75);
+
+  // @media (max-width: 425px) {
+  //   & {
+  //     @include titleMobilWhite3;
+  //   }
+  // }
 }
 
 .contentButtons {
   margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .contenBtnWork {
@@ -167,6 +182,11 @@
   img {
     width: 520px;
     height: 670px;
+
+    @media (max-width: 425px) {
+      width: 320px;
+      height: 470px;
+    }
   }
 
   @media (max-width: 1240px) {

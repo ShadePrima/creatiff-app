@@ -46,6 +46,13 @@ $margin32: 32px;
   color: $color-text-white;
 }
 
+@mixin titleMobilWhite3() {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  color: $color-text-white;
+}
+
 @mixin titleBlack1() {
   font-weight: 700;
   font-size: 40px;

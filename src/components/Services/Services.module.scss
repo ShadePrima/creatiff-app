@@ -16,6 +16,10 @@
     padding: 40px 24px;
     background: linear-gradient(90deg, #7eb547 0%, #668333 100%);
     border-radius: 8px;
+
+    @media (max-width: 425px) {
+      max-width: 375px;
+    }
   }
 
   .title {
@@ -36,13 +40,16 @@
 
   .arrow {
     margin-top: 136px;
+    max-width: 352px;
   }
 
   .rightBlock {
     width: 816px;
-    height: 568px;
+    min-height: 568px;
+
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }

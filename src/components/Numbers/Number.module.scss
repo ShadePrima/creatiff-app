@@ -2,19 +2,21 @@
 
 .root {
   margin-top: 64px;
-  width: 100px;
-  height: 120px;
+  min-height: 120px;
   display: flex;
+  flex-wrap: wrap;
   gap: 64px;
 
-  @media (max-width: 1240px) {
+  @media (max-width: 425px) {
     & {
-      display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
     }
   }
 
   .wrapper {
+    max-width: 100px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,6 +28,7 @@
   }
 
   p {
+    text-align: start;
     font-family: $font-family;
     font-weight: 400;
     font-size: 20px;

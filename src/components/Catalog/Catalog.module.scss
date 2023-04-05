@@ -12,14 +12,24 @@
   .image {
     width: 465px;
     height: 674px;
+
+    @media (max-width: 425px) {
+      width: 365px;
+      height: 574px;
+    }
   }
 
   .catalog {
     margin-left: 55px;
-    width: 712px;
-    height: 594px;
+    max-width: 712px;
+    min-height: 594px;
+
+    @media (max-width: 425px) {
+      margin-left: 0;
+    }
 
     .title {
+      padding: 10px;
       font-weight: 700;
       font-size: 40px;
       line-height: 125%;
@@ -27,6 +37,7 @@
     }
 
     .description {
+      padding: 10px;
       margin-top: 32px;
       font-weight: 400;
       font-size: 20px;
@@ -36,16 +47,16 @@
 
     .catalogItems {
       margin-top: 48px;
-      width: 712px;
-      height: 368px;
+      max-width: 712px;
+      min-height: 368px;
     }
   }
 }
 
 .catalogItem {
   margin-top: 24px;
-  width: 712px;
-  height: 64px;
+  max-width: 712px;
+  min-height: 64px;
   padding: 12px;
 
   display: flex;
@@ -76,8 +87,8 @@
 
 .panelOpen {
   margin-top: 24px;
-  width: 712px;
-  height: 104px;
+  max-width: 712px;
+  min-height: 104px;
   padding: 12px;
 
   display: flex;

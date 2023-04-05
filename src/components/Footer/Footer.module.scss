@@ -1,26 +1,34 @@
 @import '../../styles/variables';
 
 .root {
-  height: 349px;
+  min-height: 349px;
   background: #040404;
 }
 
 .container {
   padding-top: $margin-section;
-  width: 1024px;
-  height: 205px;
+  max-width: 1064px;
+  min-height: 205px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .title {
+  padding-top: 32px;
   @include titleWhite2;
+
+  @media (max-width: 425px) {
+    text-align: center;
+  }
 }
 
 .contacts {
   margin-top: $margin32;
   padding-bottom: 32px;
   display: flex;
-  gap: 113px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -40,6 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -48,4 +57,9 @@
 
 .copyright {
   @include textWhite2;
+
+  @media (max-width: 425px) {
+    margin-top: 8px;
+    text-align: center;
+  }
 }

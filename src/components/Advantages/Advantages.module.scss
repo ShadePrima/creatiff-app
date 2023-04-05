@@ -13,8 +13,8 @@
 }
 
 .content {
-  width: 712px;
-  height: 570px;
+  max-width: 712px;
+  min-height: 570px;
 
   h1 {
     @include titleBlack1;
@@ -41,15 +41,19 @@
 
 .list {
   margin-top: 48px;
-  width: 569px;
-  height: 172px;
+  max-width: 569px;
+  min-height: 172px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 425px) {
+    margin-left: 50px;
+  }
 }
 
 .listItem {
-  width: 257px;
-  height: 36px;
+  max-width: 257px;
+  min-height: 36px;
   display: flex;
   align-items: center;
 
@@ -67,11 +71,17 @@
 
 .button {
   margin-top: 50px;
-  width: 526px;
-  height: 56px;
+  padding: 0 30px;
+  max-width: 526px;
+  min-height: 56px;
 }
 
 .image {
   width: 504px;
   height: 570px;
+
+  @media (max-width: 415px) {
+    width: 304px;
+    height: 370px;
+  }
 }

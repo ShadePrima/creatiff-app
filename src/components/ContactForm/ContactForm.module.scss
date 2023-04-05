@@ -44,7 +44,7 @@
 
   textarea {
     margin-top: 8px;
-    height: 144px;
+    min-height: 144px;
     border-radius: 8px;
     @include textGray2;
     padding: 8px 16px;

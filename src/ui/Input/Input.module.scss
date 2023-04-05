@@ -1,8 +1,8 @@
 @import '../../styles/variables';
 
 .root {
-  width: 330px;
-  height: 94px;
+  max-width: 330px;
+  min-height: 94px;
 }
 
 .titleIcon {
@@ -11,8 +11,8 @@
 
 .input {
   margin-top: 8px;
-  width: 330px;
-  height: 56px;
+  max-width: 330px;
+  min-height: 56px;
   border: $border-grey;
   border-radius: 8px;
 

@@ -1,16 +1,17 @@
 @import '../../styles/variables';
 
 .root {
-  margin-top: $margin-section;
-  height: 622px;
+  padding-top: $margin-section;
+  min-height: 622px;
   background: $background-radial-black;
 }
 
 .formContainer {
   padding-top: $margin-section;
+  padding: 0 20px;
   margin: 0 auto;
-  width: 1024px;
-  height: 478px;
+  max-width: 1064px;
+  min-height: 478px;
 
   h1 {
     @include titleWhite1;
@@ -19,9 +20,17 @@
 }
 
 .inputs {
+  max-width: 1024px;
   margin-top: 32px;
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 715px) {
+    & {
+      justify-content: center;
+    }
+  }
 }
 
 .textArea {

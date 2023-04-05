@@ -33,6 +33,10 @@
       gap: 32px;
     }
   }
+
+  @media (max-width: 425px) {
+    padding-left: 20px;
+  }
 }
 
 .contacts {

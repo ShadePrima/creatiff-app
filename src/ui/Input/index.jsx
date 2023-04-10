@@ -1,13 +1,22 @@
-import React from 'react';
-import styles from './Input.module.scss';
+import React from 'react'
+import styles from './Input.module.scss'
 
-const Input = ({ title, placeholder, type }) => {
+const Input = ({ id, name, type, title, placeholder, value, onChange }) => {
   return (
     <div className={styles.root}>
       <img src={title} alt='Name' className={styles.titleIcon} />
-      <input type={type} className={styles.input} placeholder={placeholder} />
+      <input
+        className={styles.input}
+        id={id}
+        name={name}
+        type={type}
+        title={title}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
     </div>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

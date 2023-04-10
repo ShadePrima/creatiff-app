@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './Catalog.module.scss';
-import catalogPhoto from '../../assets/background/catalog.png';
-import CatalogItem from '../CatalogItem';
-import autoAnimate from '@formkit/auto-animate';
-import clsx from 'clsx';
-import catalogCheckTop from '../../assets/icons/check-top-icon.svg';
-import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg';
-import catalogIcon from '../../assets/icons/icon-background.png';
+import React from 'react'
+import styles from './Catalog.module.scss'
+import catalogPhoto from '../../assets/background/catalog.png'
+import CatalogItem from '../CatalogItem'
+import autoAnimate from '@formkit/auto-animate'
+import clsx from 'clsx'
+import catalogCheckTop from '../../assets/icons/check-top-icon.svg'
+import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg'
+import catalogIcon from '../../assets/icons/icon-background.png'
 
 const catalogList = [
   {
@@ -32,20 +32,19 @@ const catalogList = [
     description:
       'Серед наших типів товарів маємо: гарні, ще кращі, повний улет',
   },
-];
+]
 
 const Catalog = () => {
-  const [acitveIndex, setActiveIndex] = React.useState(1);
-  const parent = React.useRef(null);
-  console.log(acitveIndex, 'activeIndex');
+  const [acitveIndex, setActiveIndex] = React.useState(1)
+  const parent = React.useRef(null)
 
   React.useEffect(() => {
-    parent.current && autoAnimate(parent.current);
-  }, [parent]);
+    parent.current && autoAnimate(parent.current)
+  }, [parent])
 
   const handleMoreClick = (id) => {
-    setActiveIndex(id);
-  };
+    setActiveIndex(id)
+  }
 
   return (
     <div className={styles.root}>
@@ -96,8 +95,8 @@ const Catalog = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 function Panel({ id, title, handleMoreClick, isActive }) {
   return (
@@ -124,7 +123,7 @@ function Panel({ id, title, handleMoreClick, isActive }) {
         />
       )}
     </div>
-  );
+  )
 }
 
 function PanelOpen({ id, title, handleMoreClick, isActive }) {
@@ -155,7 +154,7 @@ function PanelOpen({ id, title, handleMoreClick, isActive }) {
         />
       )}
     </div>
-  );
+  )
 }
 
-export default Catalog;
+export default Catalog

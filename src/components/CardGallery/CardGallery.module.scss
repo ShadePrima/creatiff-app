@@ -8,12 +8,20 @@
 
   border-radius: 8px;
   overflow: hidden;
+
+  @media (max-width: 425px) {
+    width: 320px;
+  }
 }
 
 .image {
   height: 260px;
   width: 400px;
   vertical-align: bottom;
+
+  @media (max-width: 425px) {
+    width: 320px;
+  }
 }
 
 .title {
@@ -31,5 +39,9 @@
 
   &:first-letter {
     text-transform: capitalize;
+  }
+
+  @media (max-width: 425px) {
+    width: 320px;
   }
 }

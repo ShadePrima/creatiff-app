@@ -10,11 +10,13 @@ import Partners from './components/Partners'
 import Services from './components/Services'
 
 import './styles/main.scss'
+import InfoCardV2 from './components/InfoCardV2/InfoCardV2'
 
 function App() {
   return (
     <div>
       <Header />
+      <InfoCardV2 />
       {/* <Catalog />
       <CataloBlock />
       <Advantages />

@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 
-import Numbers from '../Numbers';
+import Numbers from '../Numbers'
 
-import styles from './Header.module.scss';
-import logoEmail from '../../assets/icons/Email.svg';
-import logoTelephone from '../../assets/icons/Telephone.svg';
-import nineIcon from '../../assets/Numbers/nine-plus.png';
-import twoIcon from '../../assets/Numbers/two-plus.png';
-import twentyIcon from '../../assets/Numbers/twenty-plus.png';
-import imgBkg from '../../assets/background/header-img.png';
-import Logo from '../../ui/Logo';
-import { scrollToForm } from '../../utils/scrollToForm';
+import styles from './Header.module.scss'
+import logoEmail from '../../assets/icons/Email.svg'
+import logoTelephone from '../../assets/icons/Telephone.svg'
+import nineIcon from '../../assets/Numbers/nine-plus.png'
+import twoIcon from '../../assets/Numbers/two-plus.png'
+import twentyIcon from '../../assets/Numbers/twenty-plus.png'
+import imgBkg from '../../assets/background/header-img.png'
+import Logo from '../../ui/Logo'
+import { scrollToForm } from '../../utils/scrollToForm'
 
 const numberObj = [
   { id: 1, icon: nineIcon, text: 'Щасливих Клієнтів' },
   { id: 2, icon: twoIcon, text: 'Меблів Продано' },
   { id: 3, icon: twentyIcon, text: 'Збудованих конструкцій' },
-];
+]
 
 const Header = () => {
   return (
     <header className={styles.root}>
-      <div className={styles.wrapper}>
+      <div className='wrapper'>
         <div className={styles.title}>
           <Logo />
           <div className={styles.contacts}>
@@ -68,7 +68,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

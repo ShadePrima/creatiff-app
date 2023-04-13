@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.root {
+  margin-top: 128px;
+  min-height: 664px;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}

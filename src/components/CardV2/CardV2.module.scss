@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+
+.root {
+  width: 400px;
+  min-height: 324px;
+  padding: 24px 20px 24px 24px;
+  border: $border2;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.title {
+  margin-top: 24px;
+  @include titleBlack2;
+}
+
+.text {
+  margin-top: 12px;
+  @include textBlack1;
+}
+
+.button {
+  margin-top: 16px;
+
+  width: 115px;
+  height: 32px;
+
+  border: 1px solid #15132a;
+  border-radius: 64px;
+  background-color: $white;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 125%;
+  color: $color-text-black;
+
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:active {
+    transform: translateY(2px);
+  }
+}

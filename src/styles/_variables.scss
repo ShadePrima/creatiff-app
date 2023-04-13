@@ -1,5 +1,6 @@
 //colors
 $black: #232323;
+$white: #fff;
 $background: #1e1e1e;
 $background-radial-black: radial-gradient(
   100% 374.61% at 0% 0%,
@@ -16,6 +17,7 @@ $text-color-description: rgba(21, 19, 42, 0.75);
 
 //element
 $border: 1px solid rgba(0, 0, 0, 0.13);
+$border2: 1.5px solid rgba(0, 0, 0, 0.13);
 $border-grey: 1px solid rgba(255, 255, 255, 0.25);
 
 //margin
@@ -107,4 +109,12 @@ $margin32: 32px;
   font-size: 20px;
   line-height: 150%;
   color: $color-text-white;
+}
+
+@mixin textBlack1() {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-text-black;
 }

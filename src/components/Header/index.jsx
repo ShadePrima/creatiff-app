@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Numbers from '../Numbers'
 
@@ -8,7 +8,8 @@ import logoTelephone from '../../assets/icons/Telephone.svg'
 import nineIcon from '../../assets/Numbers/nine-plus.png'
 import twoIcon from '../../assets/Numbers/two-plus.png'
 import twentyIcon from '../../assets/Numbers/twenty-plus.png'
-import imgBkg from '../../assets/background/header-img.png'
+import imgBkg from '../../assets/Header/header-img.png'
+import imgBkg2 from '../../assets/Header/header-img-2.png'
 import Logo from '../../ui/Logo'
 import { scrollToForm } from '../../utils/scrollToForm'
 
@@ -18,7 +19,18 @@ const numberObj = [
   { id: 3, icon: twentyIcon, text: 'Збудованих конструкцій' },
 ]
 
+const images = [imgBkg, imgBkg2]
+
 const Header = () => {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((index + 1) % images.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [index])
+
   return (
     <header className={styles.root}>
       <div className='wrapper'>
@@ -63,7 +75,7 @@ const Header = () => {
             <Numbers items={numberObj} />
           </div>
           <div className={styles.contentImg}>
-            <img src={imgBkg} alt='Header Item' />
+            <img src={images[index]} alt='Header Item' />
           </div>
         </div>
       </div>

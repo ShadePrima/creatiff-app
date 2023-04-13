@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .root {
-  min-height: 744px;
+  height: 744px;
   max-width: 100%;
   //   background-color: $background;
   background-image: url('../../assets/background/Background.png');
@@ -10,7 +10,7 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1232px;
+  max-width: 1242px;
 }
 
 .title {
@@ -186,6 +186,9 @@
   img {
     width: 520px;
     height: 670px;
+
+    // position: relative;
+    // top: 100px;
 
     @media (max-width: 425px) {
       width: 320px;

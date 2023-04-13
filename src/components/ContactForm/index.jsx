@@ -30,7 +30,7 @@ const ContactForm = () => {
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.formContainer}>
-          <h1 id='contactForm'>поговоримо</h1>
+          <h1 id='contactForm'>ВИНИКЛИ ПИТАННЯ? НАПИШИ НАМ</h1>
           <div className={styles.inputs}>
             <Input
               id='name'

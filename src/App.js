@@ -11,17 +11,20 @@ import Services from './components/Services'
 
 import './styles/main.scss'
 import InfoCardV2 from './components/InfoCardV2/InfoCardV2'
+import Gallery from './components/Gallery/Gallery'
 
 function App() {
   return (
     <div>
       <Header />
       <InfoCardV2 />
-      {/* <Catalog />
+      <Partners />
+      <Catalog />
       <CataloBlock />
+      <Gallery />
       <Advantages />
       <ContactForm />
-      <Footer /> */}
+      <Footer />
     </div>
   )
 }

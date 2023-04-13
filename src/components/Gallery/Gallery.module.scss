@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.root {
+  min-height: 634px;
+}
+
+.title {
+  margin-top: $margin-section;
+
+  text-align: center;
+  @include titleBlack1;
+}
+
+.container {
+  margin-top: 48px;
+  min-height: 536px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}

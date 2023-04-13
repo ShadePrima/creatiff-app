@@ -6,6 +6,11 @@
   //   background-color: $background;
   background-image: url('../../assets/background/Background.png');
   background-size: cover;
+
+  @media (max-width: 1240px) {
+    height: auto;
+    min-height: 744px;
+  }
 }
 
 .wrapper {

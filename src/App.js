@@ -7,7 +7,6 @@ import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Partners from './components/Partners'
-import Services from './components/Services'
 
 import './styles/main.scss'
 import InfoCardV2 from './components/InfoCardV2/InfoCardV2'

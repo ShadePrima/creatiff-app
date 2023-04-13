@@ -191,9 +191,13 @@
   img {
     width: 520px;
     height: 670px;
+    animation: slide 10000ms ease-in-out infinite;
 
-    // position: relative;
-    // top: 100px;
+    // animation-name: slide;
+    // animation-duration: 10s;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: linear;
+    // animation-fill-mode: both;
 
     @media (max-width: 425px) {
       width: 320px;
@@ -205,5 +209,29 @@
     & {
       margin-top: $margin32;
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+
+  15% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20%);
   }
 }

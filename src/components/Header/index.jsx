@@ -8,7 +8,7 @@ import logoTelephone from '../../assets/icons/Telephone.svg'
 import nineIcon from '../../assets/Numbers/nine-plus.png'
 import twoIcon from '../../assets/Numbers/two-plus.png'
 import twentyIcon from '../../assets/Numbers/twenty-plus.png'
-import imgBkg from '../../assets/Header/header-img.png'
+import imgBkg from '../../assets/Header/header-img-1.png'
 import imgBkg2 from '../../assets/Header/header-img-2.png'
 import Logo from '../../ui/Logo'
 import { scrollToForm } from '../../utils/scrollToForm'
@@ -27,7 +27,7 @@ const Header = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index + 1) % images.length)
-    }, 5000)
+    }, 10000)
     return () => clearInterval(interval)
   }, [index])
 

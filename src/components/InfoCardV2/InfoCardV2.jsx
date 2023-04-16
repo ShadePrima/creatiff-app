@@ -24,24 +24,24 @@ const contentCard = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    id: 1,
+    id: 5,
     title: 'Вікна та двері',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    id: 1,
+    id: 6,
     title: 'Загальнобудівельні види робіт',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ]
 
-const InfoCardV2 = () => {
+const InfoCardV2 = ({ index }) => {
   return (
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.conteiner}>
-          {contentCard.map((item) => (
-            <CardV2 title={item.title} />
+          {contentCard.map((item, index) => (
+            <CardV2 key={item.id} title={item.title} index={index} />
           ))}
         </div>
       </div>

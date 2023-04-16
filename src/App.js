@@ -1,29 +1,18 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
-import Advantages from './components/Advantages'
-import Catalog from './components/Catalog'
-import CataloBlock from './components/CatalogBlock'
-import ContactForm from './components/ContactForm'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Partners from './components/Partners'
+import MainPage from './pages/MainPage'
 
 import './styles/main.scss'
-import InfoCardV2 from './components/InfoCardV2/InfoCardV2'
-import Gallery from './components/Gallery/Gallery'
+import InfoCardPage from './pages/InfoCardPage'
 
 function App() {
   return (
     <div>
-      <Header />
-      <InfoCardV2 />
-      <Partners />
-      <Catalog />
-      <CataloBlock />
-      <Gallery />
-      <Advantages />
-      <ContactForm />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<MainPage />} />
+        <Route path='/:id' element={<InfoCardPage />} />
+      </Routes>
     </div>
   )
 }

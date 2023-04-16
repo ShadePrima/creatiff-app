@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './CardV2.module.scss'
 import homeIcon from '../../assets/icons/Home.svg'
+import { Link } from 'react-router-dom'
 
-const CardV2 = ({ title }) => {
+const CardV2 = ({ title, index }) => {
   return (
     <div className={styles.root}>
       <img src={homeIcon} alt='Home' className={styles.icon} />
@@ -11,7 +12,9 @@ const CardV2 = ({ title }) => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <button className={styles.button}>читати далі</button>
+      <Link to={`/${index}`}>
+        <button className={styles.button}>читати далі</button>
+      </Link>
     </div>
   )
 }

@@ -191,7 +191,7 @@
   img {
     width: 520px;
     height: 670px;
-    animation: slide 10000ms ease-in-out infinite;
+    animation: first-slide 10000ms ease-in-out infinite;
 
     @media (max-width: 425px) {
       width: 320px;
@@ -199,10 +199,38 @@
     }
   }
 
+  .image {
+    animation: slide 10000ms ease-in-out infinite;
+  }
+
   @media (max-width: 1240px) {
     & {
       margin-top: $margin32;
     }
+  }
+}
+
+@keyframes first-slide {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20%);
   }
 }
 

@@ -23,13 +23,18 @@ const images = [imgBkg, imgBkg2]
 
 const Header = () => {
   const [index, setIndex] = useState(0)
+  const [showFirstImage, setShowFirstImage] = useState(true)
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setShowFirstImage(false)
       setIndex((index + 1) % images.length)
     }, 10000)
     return () => clearInterval(interval)
   }, [index])
+
+  // const currentImage = images[index]
+  const currentImage = images[index]
 
   return (
     <header className={styles.root}>
@@ -75,7 +80,15 @@ const Header = () => {
             <Numbers items={numberObj} />
           </div>
           <div className={styles.contentImg}>
-            <img src={images[index]} alt='Header Item' />
+            {showFirstImage ? (
+              <img src={imgBkg} alt='Header Item' />
+            ) : (
+              <img
+                className={styles.image}
+                src={currentImage}
+                alt='Header Item'
+              />
+            )}
           </div>
         </div>
       </div>

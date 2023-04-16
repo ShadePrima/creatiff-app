@@ -6,7 +6,7 @@ import autoAnimate from '@formkit/auto-animate'
 import clsx from 'clsx'
 import catalogCheckTop from '../../assets/icons/check-top-icon.svg'
 import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg'
-import catalogIcon from '../../assets/icons/icon-background.png'
+import catalogIcon from '../../assets/icons/icon-background.svg'
 
 const catalogList = [
   {

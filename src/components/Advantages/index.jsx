@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from '../../ui/Button';
-import styles from './Advantages.module.scss';
-import backgroundImage from '../../assets/Advantages/background.png';
-import heartIcon from '../../assets/Advantages/heart.png';
-import lukasIcon from '../../assets/Advantages/Lukas.png';
-import toolsIcon from '../../assets/Advantages/Tools.png';
-import { scrollToForm } from '../../utils/scrollToForm';
+import React from 'react'
+import Button from '../../ui/Button'
+import styles from './Advantages.module.scss'
+import backgroundImage from '../../assets/Advantages/background.png'
+import heartIcon from '../../assets/Advantages/heart.svg'
+import lukasIcon from '../../assets/Advantages/Lukas.svg'
+import toolsIcon from '../../assets/Advantages/Tools.svg'
+import { scrollToForm } from '../../utils/scrollToForm'
 
 const list = [
   { id: 1, title: 'Якість та гарантії', icone: lukasIcon },
@@ -14,7 +14,7 @@ const list = [
   { id: 4, title: 'Якість та гарантії', icone: lukasIcon },
   { id: 5, title: 'Робимо з любов’ю', icone: heartIcon },
   { id: 6, title: 'Наші переваги', icone: toolsIcon },
-];
+]
 
 const Advantages = () => {
   return (
@@ -42,7 +42,7 @@ const Advantages = () => {
         <img src={backgroundImage} alt='background' className={styles.image} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Advantages;
+export default Advantages

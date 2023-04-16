@@ -1,19 +1,19 @@
-import React from 'react';
-import cx from 'clsx';
+import React from 'react'
+import cx from 'clsx'
 
-import catalogCheckTop from '../../assets/icons/check-top-icon.svg';
-import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg';
-import catalogIcon from '../../assets/icons/icon-background.png';
+import catalogCheckTop from '../../assets/icons/check-top-icon.svg'
+import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg'
+import catalogIcon from '../../assets/icons/icon-background.svg'
 
-import styles from './CatalogItem.module.scss';
-import autoAnimate from '@formkit/auto-animate';
+import styles from './CatalogItem.module.scss'
+import autoAnimate from '@formkit/auto-animate'
 
 const CatalogItem = ({ id, title, handleMoreClick, isActive }) => {
-  const parent = React.useRef(null);
+  const parent = React.useRef(null)
 
   React.useEffect(() => {
-    parent.current && autoAnimate(parent.current);
-  }, [parent]);
+    parent.current && autoAnimate(parent.current)
+  }, [parent])
 
   return (
     <div
@@ -48,7 +48,7 @@ const CatalogItem = ({ id, title, handleMoreClick, isActive }) => {
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CatalogItem;
+export default CatalogItem

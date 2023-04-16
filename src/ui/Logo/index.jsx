@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './Logo.module.scss';
-import logoIcon from '../../assets/icons/Logo.png';
+import React from 'react'
+import styles from './Logo.module.scss'
+import logoIcon from '../../assets/icons/Logo.svg'
 
 const Logo = () => {
   return (
@@ -8,7 +8,7 @@ const Logo = () => {
       <img src={logoIcon} alt='Logo' />
       <p className={styles.logoTitle}>Creatiff - realizamos ideas</p>
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

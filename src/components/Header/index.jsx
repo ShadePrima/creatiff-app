@@ -13,7 +13,6 @@ const Header = () => {
         <div className={styles.title}>
           <div className={styles.logo}>
             <img src={logo} alt='Logo' className={styles.logoIcon} />
-            {/* <img src={textIcon} alt='text' className={styles.text} /> */}
             <p className={styles.logoText}>Creatiff - realizamos ideas</p>
           </div>
           <div className={styles.contacts}>

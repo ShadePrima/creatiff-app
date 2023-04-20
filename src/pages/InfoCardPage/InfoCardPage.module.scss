@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.root {
+}
+
+.container {
+  margin: $margin-section 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: $margin-section;
+}
+
+.containerText {
+  width: 816px;
+}
+
+.title {
+  @include title1;
+  color: $color-text-black;
+}
+
+.text {
+  margin-top: 32px;
+  @include text2;
+  color: $text-color-description;
+}

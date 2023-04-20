@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Input from '../../ui/Input'
 
-import styles from './ContactForm.module.scss'
-import nameIcon from '../../assets/ContactForm/name.png'
-import mailIcon from '../../assets/ContactForm/mail.png'
-import phoneIcon from '../../assets/ContactForm/phone.png'
+import nameIcon from '../../assets/ContactForm/name.svg'
+import mailIcon from '../../assets/ContactForm/mail.svg'
+import phoneIcon from '../../assets/ContactForm/phone.svg'
 import Button from '../../ui/Button'
+import styles from './ContactForm.module.scss'
 
 const ContactForm = () => {
   const [form, setForm] = useState({

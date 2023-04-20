@@ -10,7 +10,6 @@ const Input = ({ id, name, type, title, placeholder, value, onChange }) => {
         id={id}
         name={name}
         type={type}
-        title={title}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

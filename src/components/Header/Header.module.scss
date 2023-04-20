@@ -3,8 +3,8 @@
 .root {
   height: 744px;
   max-width: 100%;
-  //   background-color: $background;
-  background-image: url('../../assets/background/Background.png');
+  background: linear-gradient(90deg, #4f6722 30.73%, #84a44a 100%);
+  // background-image: url('../../assets/background/Background.png');
   background-size: cover;
 
   @media (max-width: 1240px) {
@@ -23,12 +23,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 32px 0;
-
-  // @media (max-width: 1240px) {
-  //   & {
-  //     padding: 0 200px;
-  //   }
-  // }
 
   @media (max-width: 1229px) {
     & {

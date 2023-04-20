@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './Footer.module.scss';
-import emailIcon from '../../assets/icons/Email.svg';
-import phoneIcon from '../../assets/icons/Telephone.svg';
-import instaIcon from '../../assets/icons/Instagram.svg';
-import faceIcon from '../../assets/icons/Facebook.svg';
-import Logo from '../../ui/Logo';
+import React from 'react'
+import styles from './Footer.module.scss'
+import emailIcon from '../../assets/icons/Email.svg'
+import phoneIcon from '../../assets/icons/Telephone.svg'
+import instaIcon from '../../assets/icons/Instagram.svg'
+import faceIcon from '../../assets/icons/Facebook.svg'
+import LogoFooter from '../../ui/LogoFooter'
 
 const contacts = [
   {
@@ -26,7 +26,7 @@ const contacts = [
     icon: faceIcon,
     link: 'https://www.facebook.com',
   },
-];
+]
 
 const Footer = () => {
   return (
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
           <div className={styles.labels}>
             <div className={styles.logo}>
-              <Logo />
+              <LogoFooter />
             </div>
             <p className={styles.copyright}>
               © 2022 Creatiff. All Rights Reserved.
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

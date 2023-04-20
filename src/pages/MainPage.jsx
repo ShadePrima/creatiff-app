@@ -8,19 +8,18 @@ import Gallery from '../components/Gallery/Gallery'
 import Advantages from '../components/Advantages'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
+import HeaderContent from '../components/HeaderContent'
 
 const MainPage = () => {
   return (
     <div>
-      <Header />
+      <HeaderContent />
       <InfoCardV2 />
       <Partners />
       <Catalog />
       <CataloBlock />
       <Gallery />
-      <Advantages />
-      <ContactForm />
-      <Footer />
+      <Advantages />  
     </div>
   )
 }

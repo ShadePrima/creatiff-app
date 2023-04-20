@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Logo.module.scss'
 import logoIcon from '../../assets/icons/Logo.svg'
 
-const Logo = () => {
+const LogoFooter = () => {
   return (
     <div className={styles.logoItems}>
       <img src={logoIcon} alt='Logo' />
@@ -11,4 +11,4 @@ const Logo = () => {
   )
 }
 
-export default Logo
+export default LogoFooter

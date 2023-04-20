@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import styles from './Number.module.scss';
+import styles from './Number.module.scss'
 
 const Numbers = ({ items }) => {
   return (
@@ -12,7 +12,7 @@ const Numbers = ({ items }) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Numbers;
+export default Numbers

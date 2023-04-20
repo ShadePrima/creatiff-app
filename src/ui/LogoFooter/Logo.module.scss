@@ -2,14 +2,18 @@
 
 .logoItems {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: 16px;
+
+  img {
+    height: 48px;
+    width: 48px;
+  }
 }
 
 .logoTitle {
   color: $color-text-white;
-  margin-left: 16px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 20px;

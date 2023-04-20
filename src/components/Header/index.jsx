@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import logoEmail from '../../assets/icons/Email.svg'
 import logoTelephone from '../../assets/icons/Telephone.svg'
 import logo from '../../assets/Header/logo.svg'
-import textIcon from '../../assets/Header/text.svg'
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -11,10 +11,12 @@ const Header = () => {
     <header className={styles.root}>
       <div className='wrapper'>
         <div className={styles.title}>
-          <div className={styles.logo}>
-            <img src={logo} alt='Logo' className={styles.logoIcon} />
-            <p className={styles.logoText}>Creatiff - realizamos ideas</p>
-          </div>
+          <Link to='/'>
+            <div className={styles.logo}>
+              <img src={logo} alt='Logo' className={styles.logoIcon} />
+              <p className={styles.logoText}>Creatiff - realizamos ideas</p>
+            </div>
+          </Link>
           <div className={styles.contacts}>
             <div className={styles.contact}>
               <img src={logoEmail} alt='Email' />

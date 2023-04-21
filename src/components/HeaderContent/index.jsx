@@ -27,7 +27,7 @@ const HeaderContent = () => {
     const interval = setInterval(() => {
       setShowFirstImage(false)
       setIndex((index + 1) % images.length)
-    }, 10000)
+    }, 95000)
     return () => clearInterval(interval)
   }, [index])
 
@@ -55,15 +55,11 @@ const HeaderContent = () => {
             <Numbers items={numberObj} />
           </div>
           <div className={styles.contentImg}>
-            {showFirstImage ? (
-              <img src={imgBkg} alt='Header Item' />
-            ) : (
-              <img
-                className={styles.image}
-                src={currentImage}
-                alt='Header Item'
-              />
-            )}
+            <img
+              className={styles.image}
+              src={currentImage}
+              alt='Header Item'
+            />
           </div>
         </div>
       </div>

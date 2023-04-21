@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './Logo.module.scss'
 import logoIcon from '../../assets/icons/Logo.svg'
+import styles from './Logo.module.scss'
 
 const LogoFooter = () => {
   return (

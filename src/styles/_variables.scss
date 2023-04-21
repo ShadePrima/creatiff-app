@@ -44,6 +44,20 @@ $margin32: 32px;
   line-height: 150%;
 }
 
+@mixin text1() {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@mixin text2() {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
 @mixin titleWhite1() {
   font-weight: 700;
   font-size: 40px;
@@ -135,18 +149,4 @@ $margin32: 32px;
   font-size: 16px;
   line-height: 150%;
   color: $color-text-black;
-}
-
-@mixin text1() {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-}
-
-@mixin text2() {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
 }

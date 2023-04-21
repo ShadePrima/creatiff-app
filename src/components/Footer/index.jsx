@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './Footer.module.scss'
 import emailIcon from '../../assets/icons/Email.svg'
 import phoneIcon from '../../assets/icons/Telephone.svg'
 import instaIcon from '../../assets/icons/Instagram.svg'
 import faceIcon from '../../assets/icons/Facebook.svg'
 import LogoFooter from '../../ui/LogoFooter'
+import styles from './Footer.module.scss'
 
 const contacts = [
   {

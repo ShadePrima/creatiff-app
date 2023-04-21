@@ -21,17 +21,15 @@ const images = [imgBkg, imgBkg2]
 
 const HeaderContent = () => {
   const [index, setIndex] = useState(0)
-  const [showFirstImage, setShowFirstImage] = useState(true)
+  console.log(index, 'index')
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setShowFirstImage(false)
       setIndex((index + 1) % images.length)
-    }, 95000)
+    }, 10000)
     return () => clearInterval(interval)
   }, [index])
 
-  // const currentImage = images[index]
   const currentImage = images[index]
 
   return (

@@ -1,16 +1,9 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { cardsInfoList } from '../../helpers/cardsInfoList'
 import styles from './InfoCardPage.module.scss'
-
-const stylesTitle = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginTop: '30px',
-  padding: '20px',
-}
+import ScrollToTop from '../../utils/scrollToTop'
 
 const InfoCardPage = () => {
   const { id } = useParams()
@@ -20,6 +13,7 @@ const InfoCardPage = () => {
 
   return (
     <div className={styles.root}>
+      <ScrollToTop />
       <div className='wrapper'>
         <div className={styles.container}>
           <img src={card.image1} alt='Build1' className={styles.image1} />

@@ -55,6 +55,7 @@ const HeaderContent = () => {
           <div className={styles.contentImg}>
             <img
               className={styles.image}
+              loading='eager'
               src={currentImage}
               alt='Header Item'
             />

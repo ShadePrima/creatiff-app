@@ -7,7 +7,6 @@
   @media (max-width: 1240px) {
     height: auto;
     min-height: 590px;
-    padding-top: 60px;
   }
 }
 .content {
@@ -134,6 +133,7 @@
 
 .contentImg {
   .image {
+    width: 100%;
     animation: slide 10000ms ease-in-out infinite;
   }
 

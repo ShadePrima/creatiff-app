@@ -1,6 +1,9 @@
 @import '../../styles/variables';
 
 .root {
+  img {
+    width: 100%;
+  }
 }
 
 .container {
@@ -14,7 +17,7 @@
 }
 
 .containerText {
-  width: 816px;
+  max-width: 816px;
 }
 
 .title {

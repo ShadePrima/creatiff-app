@@ -2,14 +2,13 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 import { cardsInfoList } from '../../helpers/cardsInfoList'
-import styles from './InfoCardPage.module.scss'
 import ScrollToTop from '../../utils/scrollToTop'
+
+import styles from './InfoCardPage.module.scss'
 
 const InfoCardPage = () => {
   const { id } = useParams()
-  console.log(id, 'id')
   const card = cardsInfoList[id]
-  console.log(card.text1, 'card')
 
   return (
     <div className={styles.root}>

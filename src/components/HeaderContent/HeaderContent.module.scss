@@ -134,8 +134,7 @@
 .contentImg {
   .image1 {
     animation: slide1 10s ease-in-out infinite;
-    animation-delay: 0.5s;
-    // transition: slide 8s ease-in-out;
+    animation-delay: 0.2s;
 
     @media (max-width: 1240px) {
       width: 100%;
@@ -144,8 +143,7 @@
 
   .image2 {
     animation: slide2 10s ease-in-out infinite;
-    // animation-delay: 1s;
-    // transition: slide 8s ease-in-out;
+    animation-delay: 0.1s;
 
     @media (max-width: 1240px) {
       width: 100%;

@@ -21,14 +21,23 @@ const images = [imgBkg, imgBkg2]
 
 const HeaderContent = () => {
   const [index, setIndex] = useState(0)
+  const [mounted, setMounted] = useState(false)
   console.log(index, 'index')
+  console.log(mounted, 'mounded')
+
+  // useEffect(() => {
+  //   setMounted(true)
+  // }, [])
 
   useEffect(() => {
+    // if (mounted) {
     const interval = setInterval(() => {
+      setMounted(true)
       setIndex((index + 1) % images.length)
-    }, 8000)
+    }, 10000)
     return () => clearInterval(interval)
-  }, [index])
+    // }
+  }, [index, mounted])
 
   const currentImage = images[index]
 
@@ -54,8 +63,8 @@ const HeaderContent = () => {
           </div>
           <div className={styles.contentImg}>
             <img
-              className={styles.image}
-              loading='eager'
+              className={mounted === false ? styles.image1 : styles.image2}
+              rel='preload'
               src={currentImage}
               alt='Header Item'
             />

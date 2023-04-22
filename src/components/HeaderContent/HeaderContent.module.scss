@@ -132,9 +132,20 @@
 }
 
 .contentImg {
-  .image {
-    animation: slide 8s ease-in-out infinite;
-    animation-delay: 2s;
+  .image1 {
+    animation: slide1 10s ease-in-out infinite;
+    animation-delay: 0.5s;
+    // transition: slide 8s ease-in-out;
+
+    @media (max-width: 1240px) {
+      width: 100%;
+    }
+  }
+
+  .image2 {
+    animation: slide2 10s ease-in-out infinite;
+    // animation-delay: 1s;
+    // transition: slide 8s ease-in-out;
 
     @media (max-width: 1240px) {
       width: 100%;
@@ -148,23 +159,58 @@
   }
 }
 
-@keyframes slide {
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  65% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+}
+
+@keyframes slide2 {
   0% {
     opacity: 0;
     transform: translateX(0%);
   }
   10% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  50% {
     opacity: 1;
     transform: translateX(0%);
   }
 
   75% {
-    opacity: 0;
-    transform: translateX(20%);
+    opacity: 1;
+    transform: translateX(0%);
   }
 
   100% {
     opacity: 0;
-    transform: translateX(20%);
+    transform: translateX(30%);
   }
 }

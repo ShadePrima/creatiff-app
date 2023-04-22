@@ -1,9 +1,7 @@
 import React from 'react'
 import styles from './Catalog.module.scss'
 import catalogPhoto from '../../assets/background/catalog.png'
-import CatalogItem from '../CatalogItem'
 import autoAnimate from '@formkit/auto-animate'
-import clsx from 'clsx'
 import catalogCheckTop from '../../assets/icons/check-top-icon.svg'
 import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg'
 import catalogIcon from '../../assets/icons/icon-background.svg'
@@ -61,16 +59,6 @@ const Catalog = () => {
             </p>
 
             <div ref={parent} className={styles.catalogItems}>
-              {/* {catalogList.map((obj) => (
-                <CatalogItem
-                  key={obj.id}
-                  id={obj.id}
-                  title={obj.title}
-                  handleMoreClick={handleMoreClick}
-                  isActive={acitveIndex === obj.id}
-                />
-              ))} */}
-
               {catalogList.map((obj) =>
                 acitveIndex === obj.id ? (
                   <PanelOpen

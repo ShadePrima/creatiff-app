@@ -26,7 +26,7 @@ const HeaderContent = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index + 1) % images.length)
-    }, 10000)
+    }, 8000)
     return () => clearInterval(interval)
   }, [index])
 

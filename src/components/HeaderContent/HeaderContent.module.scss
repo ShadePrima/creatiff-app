@@ -133,7 +133,8 @@
 
 .contentImg {
   .image {
-    animation: slide 10050ms ease infinite;
+    animation: slide 8s ease-in-out infinite;
+    animation-delay: 2s;
 
     @media (max-width: 1240px) {
       width: 100%;
@@ -152,23 +153,16 @@
     opacity: 0;
     transform: translateX(0%);
   }
+  10% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 
-  15% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  25% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
   75% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  85% {
     opacity: 0;
     transform: translateX(20%);
   }
+
   100% {
     opacity: 0;
     transform: translateX(20%);

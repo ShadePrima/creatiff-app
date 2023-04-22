@@ -1,0 +1,9 @@
+@import '../../../../styles/variables';
+
+.root {
+  p {
+    @include text2;
+    color: $text-color-description;
+    padding: 16px 0;
+  }
+}

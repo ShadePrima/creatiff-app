@@ -133,7 +133,8 @@
 
 .contentImg {
   .image {
-    animation: slide 10.2s ease-in-out infinite;
+    animation: slide 10s ease-in-out infinite;
+    // animation-fill-mode: none;
     // animation-delay: 1s;
 
     @media (max-width: 1240px) {
@@ -149,6 +150,34 @@
 }
 
 @keyframes slide {
+  // 0% {
+  //   opacity: 0;
+  //   transform: translateX(0%);
+  // }
+
+  // 15% {
+  //   opacity: 1;
+  //   transform: translateX(0%);
+  // }
+  // 50% {
+  //   opacity: 1;
+  //   transform: translateX(0%);
+  // }
+
+  // 75% {
+  //   opacity: 1;
+  //   transform: translateX(0%);
+  // }
+
+  // 95% {
+  //   opacity: 0;
+  //   transform: translateX(30%);
+  // }
+
+  // 100% {
+  //   opacity: 0;
+  //   transform: translateX(30%);
+  // }
   0% {
     opacity: 0;
     transform: translateX(0%);
@@ -158,19 +187,15 @@
     opacity: 1;
     transform: translateX(0%);
   }
+
   50% {
     opacity: 1;
     transform: translateX(0%);
   }
 
-  75% {
+  85% {
     opacity: 1;
     transform: translateX(0%);
-  }
-
-  95% {
-    opacity: 0;
-    transform: translateX(30%);
   }
 
   100% {

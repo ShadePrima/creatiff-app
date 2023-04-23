@@ -63,7 +63,8 @@ const HeaderContent = () => {
           </div>
           <div className={styles.contentImg}>
             <img
-              className={mounted === false ? styles.image1 : styles.image2}
+              // className={mounted === false ? styles.image1 : styles.image2}
+              className={styles.image}
               rel='preload'
               src={currentImage}
               alt='Header Item'

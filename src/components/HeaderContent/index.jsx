@@ -34,7 +34,7 @@ const HeaderContent = () => {
     const interval = setInterval(() => {
       setMounted(true)
       setIndex((index + 1) % images.length)
-    }, 9800)
+    }, 10000)
     return () => clearInterval(interval)
     // }
   }, [index, mounted])

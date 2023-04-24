@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
 
 import Numbers from '../Numbers'
 
@@ -9,6 +10,7 @@ import twoIcon from '../../assets/Numbers/two-plus.svg'
 import twentyIcon from '../../assets/Numbers/twenty-plus.svg'
 import imgBkg from '../../assets/Header/header-img-1.png'
 import imgBkg2 from '../../assets/Header/header-img-2.png'
+
 import styles from './HeaderContent.module.scss'
 
 const numberObj = [
@@ -21,11 +23,17 @@ const images = [imgBkg, imgBkg2]
 
 const HeaderContent = () => {
   const [index, setIndex] = useState(0)
+  // const [showImage, setShowImage] = useState(true)
+  // const nodeRef = useRef(null)
+  // console.log(showImage, 'showImage')
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index + 1) % images.length)
-    }, 9900)
+    }, 10000)
+    // setTimeout(() => {
+    //   setShowImage((prev) => !prev)
+    // }, 1000)
     return () => clearInterval(interval)
   }, [index])
 
@@ -54,7 +62,7 @@ const HeaderContent = () => {
           <div className={styles.contentImg}>
             <img
               className={styles.image}
-              rel='preload'
+              // ref={nodeRef}
               src={currentImage}
               alt='Header Item'
             />

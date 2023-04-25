@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import { useInterval } from 'react-interval'
 
 import Numbers from '../Numbers'
 
@@ -22,18 +23,35 @@ const numberObj = [
 const images = [imgBkg, imgBkg2]
 
 const HeaderContent = () => {
+  // const [index, setIndex] = useState(0)
+  // const [showImage1, setShowImage1] = useState(true)
+  // const [showImage2, setShowImage2] = useState(false)
+  // console.log(showImage1)
+  // console.log(showImage2)
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIndex((index + 1) % images.length)
+  //     setShowImage1((prev) => !prev)
+  //     setShowImage2((prev) => !prev)
+  //   }, 5000)
+
+  //   return () => clearInterval(interval)
+  // }, [showImage1, showImage2])
+
+  // useInterval(() => {
+  //   setShowImage1((prev) => !prev)
+  //   setShowImage2((prev) => !prev)
+  // }, 10000)
+
   const [index, setIndex] = useState(0)
-  // const [showImage, setShowImage] = useState(true)
-  // const nodeRef = useRef(null)
-  // console.log(showImage, 'showImage')
+  console.log(index, 'index')
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index + 1) % images.length)
     }, 10000)
-    // setTimeout(() => {
-    //   setShowImage((prev) => !prev)
-    // }, 1000)
+
     return () => clearInterval(interval)
   }, [index])
 
@@ -62,10 +80,15 @@ const HeaderContent = () => {
           <div className={styles.contentImg}>
             <img
               className={styles.image}
-              // ref={nodeRef}
               src={currentImage}
               alt='Header Item'
             />
+            {/* <CSSTransition in={showImage1} timeout={500} classNames='fade'>
+              <img src={currentImage} alt='First' />
+            </CSSTransition>
+            <CSSTransition in={showImage2} timeout={500} classNames='fade'>
+              <img src={imgBkg2} alt='Second' />
+            </CSSTransition> */}
           </div>
         </div>
       </div>

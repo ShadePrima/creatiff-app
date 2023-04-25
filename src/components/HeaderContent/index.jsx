@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
-import { useInterval } from 'react-interval'
 
 import Numbers from '../Numbers'
 
@@ -23,27 +22,6 @@ const numberObj = [
 const images = [imgBkg, imgBkg2]
 
 const HeaderContent = () => {
-  // const [index, setIndex] = useState(0)
-  // const [showImage1, setShowImage1] = useState(true)
-  // const [showImage2, setShowImage2] = useState(false)
-  // console.log(showImage1)
-  // console.log(showImage2)
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setIndex((index + 1) % images.length)
-  //     setShowImage1((prev) => !prev)
-  //     setShowImage2((prev) => !prev)
-  //   }, 5000)
-
-  //   return () => clearInterval(interval)
-  // }, [showImage1, showImage2])
-
-  // useInterval(() => {
-  //   setShowImage1((prev) => !prev)
-  //   setShowImage2((prev) => !prev)
-  // }, 10000)
-
   const [index, setIndex] = useState(0)
   console.log(index, 'index')
 

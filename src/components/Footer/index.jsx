@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import emailIcon from '../../assets/icons/Email.svg'
 import phoneIcon from '../../assets/icons/Telephone.svg'
 import instaIcon from '../../assets/icons/Instagram.svg'
 import faceIcon from '../../assets/icons/Facebook.svg'
 import LogoFooter from '../../ui/LogoFooter'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import styles from './Footer.module.scss'
 
 const contacts = [
@@ -29,10 +32,14 @@ const contacts = [
 ]
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className={styles.root}>
       <div className='wrapper'>
-        <div className={styles.container}>
+        <div className={styles.container} data-aos='fade-up'>
           <h2 className={styles.title}>Зворотній в’язок</h2>
           <div className={styles.contacts}>
             {contacts.map((contact) => (

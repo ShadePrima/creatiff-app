@@ -1,16 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 import logoEmail from '../../assets/icons/Email.svg'
 import logoTelephone from '../../assets/icons/Telephone.svg'
 import logo from '../../assets/Header/logo.svg'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = ({ setLoading }) => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <header className={styles.root}>
       <div className='wrapper'>
-        <div className={styles.title}>
+        <div className={styles.title} data-aos='fade-down'>
           <Link to='/'>
             <div className={styles.logo}>
               <img src={logo} alt='Logo' className={styles.logoIcon} />

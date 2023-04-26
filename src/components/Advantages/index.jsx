@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../../ui/Button'
-import styles from './Advantages.module.scss'
 import backgroundImage from '../../assets/Advantages/background.png'
 import heartIcon from '../../assets/Advantages/heart.svg'
 import lukasIcon from '../../assets/Advantages/Lukas.svg'
 import toolsIcon from '../../assets/Advantages/Tools.svg'
 import { scrollToForm } from '../../utils/scrollToForm'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import styles from './Advantages.module.scss'
 
 const list = [
   { id: 1, title: 'Якість та гарантії', icone: lukasIcon },
@@ -17,10 +20,14 @@ const list = [
 ]
 
 const Advantages = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className={styles.root}>
       <div className={`${'wrapper'} ${styles.flexContainer}`}>
-        <div className={styles.content}>
+        <div className={styles.content} data-aos='fade-right'>
           <h1>Ми можемо відтворити все, що ви тільки забажаєте!</h1>
           <p className={styles.contentText}>
             Тут буде текст про те, як ми вміємо робити меблі на замовлення,
@@ -39,7 +46,12 @@ const Advantages = () => {
             <Button title='Зв’язатися з нами' />
           </div>
         </div>
-        <img src={backgroundImage} alt='background' className={styles.image} />
+        <img
+          src={backgroundImage}
+          data-aos='fade-left'
+          alt='background'
+          className={styles.image}
+        />
       </div>
     </div>
   )

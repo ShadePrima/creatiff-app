@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import MainPage from './pages/MainPage'
@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/:id' element={<InfoCardPage />} />

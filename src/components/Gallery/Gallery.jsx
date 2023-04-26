@@ -1,7 +1,10 @@
-import React from 'react'
-import styles from './Gallery.module.scss'
+import React, { useEffect } from 'react'
 import CardGallery from '../CardGallery/CardGallery'
 import image from '../../assets/Gallery/image.png'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import styles from './Gallery.module.scss'
 
 const contentGallery = [
   { id: 1, image: image, title: 'наші роботи' },
@@ -13,13 +16,17 @@ const contentGallery = [
 ]
 
 const Gallery = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className={styles.roor}>
       <div className='wrapper'>
         <h1 className={styles.title}>Галерея наших робіт</h1>
         <div className={styles.container}>
           {contentGallery.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} data-aos='flip-left'>
               <CardGallery image={item.image} title={item.title} />
             </div>
           ))}

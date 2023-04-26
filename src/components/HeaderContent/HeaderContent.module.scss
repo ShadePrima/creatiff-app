@@ -59,12 +59,6 @@
   font-size: 20px;
   line-height: 150%;
   color: rgba(255, 255, 255, 0.75);
-
-  // @media (max-width: 425px) {
-  //   & {
-  //     @include titleMobilWhite3;
-  //   }
-  // }
 }
 
 .contentButtons {
@@ -132,10 +126,16 @@
 }
 
 .contentImg {
+  .imageFirst {
+    animation: slideFirst 11s ease-in-out infinite;
+
+    @media (max-width: 1240px) {
+      width: 100%;
+    }
+  }
+
   .image {
     animation: slide 10s ease-in-out infinite;
-    // animation-fill-mode: none;
-    // animation-delay: 1s;
 
     @media (max-width: 1240px) {
       width: 100%;
@@ -149,35 +149,29 @@
   }
 }
 
+@keyframes slideFirst {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  95% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+}
+
 @keyframes slide {
-  // 0% {
-  //   opacity: 0;
-  //   transform: translateX(0%);
-  // }
-
-  // 15% {
-  //   opacity: 1;
-  //   transform: translateX(0%);
-  // }
-  // 50% {
-  //   opacity: 1;
-  //   transform: translateX(0%);
-  // }
-
-  // 75% {
-  //   opacity: 1;
-  //   transform: translateX(0%);
-  // }
-
-  // 95% {
-  //   opacity: 0;
-  //   transform: translateX(30%);
-  // }
-
-  // 100% {
-  //   opacity: 0;
-  //   transform: translateX(30%);
-  // }
   0% {
     opacity: 0;
     transform: translateX(0%);

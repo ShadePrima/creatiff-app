@@ -1,6 +1,9 @@
-import React from 'react'
-import styles from './InfoCardV2.module.scss'
+import React, { useEffect } from 'react'
 import CardV2 from '../CardV2/CardV2'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import styles from './InfoCardV2.module.scss'
 
 const contentCard = [
   {
@@ -35,13 +38,19 @@ const contentCard = [
   },
 ]
 
-const InfoCardV2 = ({ index }) => {
+const InfoCardV2 = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.conteiner}>
           {contentCard.map((item, index) => (
-            <CardV2 key={item.id} title={item.title} index={index} />
+            <div key={item.id} data-aos='flip-left'>
+              <CardV2 title={item.title} index={index} />
+            </div>
           ))}
         </div>
       </div>

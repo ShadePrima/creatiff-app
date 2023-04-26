@@ -1,10 +1,13 @@
-import React from 'react'
-import styles from './Catalog.module.scss'
+import React, { useEffect } from 'react'
 import catalogPhoto from '../../assets/background/catalog.png'
 import autoAnimate from '@formkit/auto-animate'
 import catalogCheckTop from '../../assets/icons/check-top-icon.svg'
 import catalogCheckBottom from '../../assets/icons/check-bottom-icon.svg'
 import catalogIcon from '../../assets/icons/icon-background.svg'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import styles from './Catalog.module.scss'
 
 const catalogList = [
   {
@@ -36,6 +39,10 @@ const Catalog = () => {
   const [acitveIndex, setActiveIndex] = React.useState(1)
   const parent = React.useRef(null)
 
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   React.useEffect(() => {
     parent.current && autoAnimate(parent.current)
   }, [parent])
@@ -48,8 +55,13 @@ const Catalog = () => {
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.container}>
-          <img src={catalogPhoto} alt='Catalog' className={styles.image} />
-          <div className={styles.catalog}>
+          <img
+            src={catalogPhoto}
+            data-aos='fade-right'
+            alt='Catalog'
+            className={styles.image}
+          />
+          <div className={styles.catalog} data-aos='fade-left'>
             <h1 className={styles.title}>
               Також ми маємо все необхідне для вашого дому
             </h1>

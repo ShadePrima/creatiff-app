@@ -1,6 +1,9 @@
-import React from 'react';
-import styles from './Partners.module.scss';
-import partnerIcon from '../../assets/Partners/partner.png';
+import React, { useEffect } from 'react'
+import partnerIcon from '../../assets/Partners/partner.png'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import styles from './Partners.module.scss'
 
 const partners = [
   { id: 1, icone: partnerIcon },
@@ -9,11 +12,15 @@ const partners = [
   { id: 4, icone: partnerIcon },
   { id: 5, icone: partnerIcon },
   { id: 6, icone: partnerIcon },
-];
+]
 
 const Partners = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
-    <div className={styles.root}>
+    <div className={styles.root} data-aos='fade-up'>
       <div className={`${'wrapper'} ${styles.container}`}>
         <div>
           <p className={styles.title}>Наші Партнери:</p>
@@ -27,7 +34,7 @@ const Partners = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners

@@ -1,16 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
-
-import Numbers from '../Numbers'
+import React, { useEffect, useState } from 'react'
+import clsx from 'clsx'
 
 import { scrollToForm } from '../../utils/scrollToForm'
 
+import Numbers from '../Numbers'
 import nineIcon from '../../assets/Numbers/nine-plus.svg'
 import twoIcon from '../../assets/Numbers/two-plus.svg'
 import twentyIcon from '../../assets/Numbers/twenty-plus.svg'
 import imgBkg from '../../assets/Header/header-img-1.png'
 import imgBkg2 from '../../assets/Header/header-img-2.png'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import styles from './HeaderContent.module.scss'
 
 const numberObj = [
@@ -23,10 +24,16 @@ const images = [imgBkg, imgBkg2]
 
 const HeaderContent = () => {
   const [index, setIndex] = useState(0)
+  const [firstImg, setFirstImg] = useState(true)
   console.log(index, 'index')
 
   useEffect(() => {
+    AOS.init()
+  }, [])
+
+  useEffect(() => {
     const interval = setInterval(() => {
+      setFirstImg(false)
       setIndex((index + 1) % images.length)
     }, 10000)
 
@@ -39,7 +46,7 @@ const HeaderContent = () => {
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.content}>
-          <div className={styles.contentText}>
+          <div className={styles.contentText} data-aos='fade-right'>
             <div className={styles.contentTitle}>
               CREATIFF <br /> Ми робимо все
             </div>
@@ -55,18 +62,12 @@ const HeaderContent = () => {
             </div>
             <Numbers items={numberObj} />
           </div>
-          <div className={styles.contentImg}>
+          <div className={styles.contentImg} data-aos='fade-left'>
             <img
-              className={styles.image}
+              className={firstImg ? styles.imageFirst : styles.image}
               src={currentImage}
               alt='Header Item'
             />
-            {/* <CSSTransition in={showImage1} timeout={500} classNames='fade'>
-              <img src={currentImage} alt='First' />
-            </CSSTransition>
-            <CSSTransition in={showImage2} timeout={500} classNames='fade'>
-              <img src={imgBkg2} alt='Second' />
-            </CSSTransition> */}
           </div>
         </div>
       </div>

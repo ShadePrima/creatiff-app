@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Input from '../../ui/Input'
 
 import nameIcon from '../../assets/ContactForm/name.svg'
 import mailIcon from '../../assets/ContactForm/mail.svg'
 import phoneIcon from '../../assets/ContactForm/phone.svg'
 import Button from '../../ui/Button'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import styles from './ContactForm.module.scss'
 
 const ContactForm = () => {
@@ -14,7 +17,10 @@ const ContactForm = () => {
     tel: '',
     letter: '',
   })
-  console.log(form, 'form')
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   const handleInput = (event) => {
     const { target } = event
@@ -30,8 +36,10 @@ const ContactForm = () => {
     <div className={styles.root}>
       <div className='wrapper'>
         <div className={styles.formContainer}>
-          <h1 id='contactForm'>ВИНИКЛИ ПИТАННЯ? НАПИШИ НАМ</h1>
-          <div className={styles.inputs}>
+          <h1 id='contactForm' data-aos='zoom-in'>
+            ВИНИКЛИ ПИТАННЯ? НАПИШИ НАМ
+          </h1>
+          <div className={styles.inputs} data-aos='zoom-in'>
             <Input
               id='name'
               name='name'
@@ -62,7 +70,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className={styles.textArea}>
+          <div className={styles.textArea} data-aos='zoom-in'>
             <label htmlFor='story'>Ваш Лист</label>
             <textarea
               name='letter'
@@ -75,7 +83,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-          <div className={styles.button}>
+          <div className={styles.button} data-aos='fade-up'>
             <Button title='Надіслати листа' width='356px' height='56px' />
           </div>
         </div>

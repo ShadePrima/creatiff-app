@@ -13,13 +13,14 @@ import HeaderContent from '../components/HeaderContent'
 const MainPage = () => {
   return (
     <div>
+      <Header />
       <HeaderContent />
       <InfoCardV2 />
       <Partners />
       <Catalog />
       <CataloBlock />
       <Gallery />
-      <Advantages />  
+      <Advantages />
     </div>
   )
 }

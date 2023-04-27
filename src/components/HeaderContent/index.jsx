@@ -29,6 +29,7 @@ const HeaderContent = () => {
 
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
 
   useEffect(() => {
@@ -62,7 +63,7 @@ const HeaderContent = () => {
             </div>
             <Numbers items={numberObj} />
           </div>
-          <div className={styles.contentImg} data-aos='fade-left'>
+          <div className={styles.contentImg} data-aos='fade-lef'>
             <img
               className={firstImg ? styles.imageFirst : styles.image}
               src={currentImage}

@@ -18,6 +18,7 @@ const contentGallery = [
 const Gallery = () => {
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
 
   return (

@@ -17,6 +17,7 @@ const partners = [
 const Partners = () => {
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
 
   return (

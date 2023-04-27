@@ -9,6 +9,7 @@ import styles from './CatalogBlock.module.scss'
 const CataloBlock = () => {
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
   return (
     <div className={styles.root} data-aos='fade-up'>

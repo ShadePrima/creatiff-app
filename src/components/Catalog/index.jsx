@@ -57,11 +57,11 @@ const Catalog = () => {
         <div className={styles.container}>
           <img
             src={catalogPhoto}
-            data-aos='fade-right'
+            data-aos='flip-left'
             alt='Catalog'
             className={styles.image}
           />
-          <div className={styles.catalog} data-aos='fade-left'>
+          <div className={styles.catalog} data-aos='flip-left'>
             <h1 className={styles.title}>
               Також ми маємо все необхідне для вашого дому
             </h1>

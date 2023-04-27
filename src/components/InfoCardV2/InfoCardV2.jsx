@@ -41,6 +41,7 @@ const contentCard = [
 const InfoCardV2 = () => {
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
 
   return (

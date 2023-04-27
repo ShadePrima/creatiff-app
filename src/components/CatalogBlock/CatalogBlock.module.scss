@@ -5,6 +5,10 @@
   min-height: 234px;
   background: $background-radial-black;
 
+  @media (max-width: 425px) {
+    padding-bottom: 48px;
+  }
+
   h1 {
     @include titleWhite1;
     padding-top: 48px;

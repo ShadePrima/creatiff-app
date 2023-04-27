@@ -132,6 +132,10 @@
     @media (max-width: 1240px) {
       width: 100%;
     }
+
+    @media (max-width: 425px) {
+      animation: none;
+    }
   }
 
   .image {
@@ -139,6 +143,10 @@
 
     @media (max-width: 1240px) {
       width: 100%;
+    }
+
+    @media (max-width: 425px) {
+      animation: none;
     }
   }
 

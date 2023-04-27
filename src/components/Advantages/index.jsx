@@ -22,12 +22,13 @@ const list = [
 const Advantages = () => {
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
 
   return (
     <div className={styles.root}>
       <div className={`${'wrapper'} ${styles.flexContainer}`}>
-        <div className={styles.content} data-aos='fade-right'>
+        <div className={styles.content} data-aos='flip-left'>
           <h1>Ми можемо відтворити все, що ви тільки забажаєте!</h1>
           <p className={styles.contentText}>
             Тут буде текст про те, як ми вміємо робити меблі на замовлення,
@@ -48,7 +49,7 @@ const Advantages = () => {
         </div>
         <img
           src={backgroundImage}
-          data-aos='fade-left'
+          data-aos='flip-left'
           alt='background'
           className={styles.image}
         />

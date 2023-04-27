@@ -12,6 +12,7 @@ import styles from './Header.module.scss'
 const Header = ({ setLoading }) => {
   useEffect(() => {
     AOS.init()
+    AOS.refresh()
   }, [])
 
   return (

@@ -5,6 +5,7 @@ const Button = ({ title, width, height }) => {
   const stylesBtn = {
     width: width,
     height: height,
+    // padding: '7px',
   }
 
   return (

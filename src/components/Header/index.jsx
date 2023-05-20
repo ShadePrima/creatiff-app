@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import logoEmail from '../../assets/icons/Email.svg'
 import logoTelephone from '../../assets/icons/Telephone.svg'
@@ -8,12 +8,18 @@ import logo from '../../assets/Header/logo.svg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import styles from './Header.module.scss'
+import { useTranslation } from 'react-i18next'
 
-const Header = ({ setLoading }) => {
+const Header = () => {
   useEffect(() => {
     AOS.init()
     AOS.refresh()
   }, [])
+
+  const { i18n } = useTranslation()
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+  }
 
   return (
     <header className={styles.root}>
@@ -40,6 +46,8 @@ const Header = ({ setLoading }) => {
                 <a href='tel:951-392-250'>951 392 250</a>
               </p>
             </div>
+            <button onClick={() => changeLanguage('en')}>En</button>
+            <button onClick={() => changeLanguage('uk')}>Uk</button>
           </div>
         </div>
       </div>

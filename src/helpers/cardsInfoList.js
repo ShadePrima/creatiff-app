@@ -5,7 +5,6 @@ import image4 from '../assets/InfoCardPage/image1-4.png'
 import Text1 from './textForPage/card1/Text1/Text1'
 import Text2 from './textForPage/card1/Text2'
 import Text3 from './textForPage/card1/Text3'
-// console.log(text1, 'text1')
 
 export const cardsInfoList = [
   {

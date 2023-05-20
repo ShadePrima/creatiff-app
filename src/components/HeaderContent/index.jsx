@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import clsx from 'clsx'
+import { useTranslation } from 'react-i18next'
 
 import { scrollToForm } from '../../utils/scrollToForm'
 
@@ -25,7 +25,8 @@ const images = [imgBkg, imgBkg2]
 const HeaderContent = () => {
   const [index, setIndex] = useState(0)
   const [firstImg, setFirstImg] = useState(true)
-  console.log(index, 'index')
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     AOS.init()
@@ -48,9 +49,14 @@ const HeaderContent = () => {
       <div className='wrapper'>
         <div className={styles.content}>
           <div className={styles.contentText} data-aos='fade-right'>
-            <div className={styles.contentTitle}>
+            {/* <div className={styles.contentTitle}>
               CREATIFF <br /> Ми робимо все
+            </div> */}
+            <div className={styles.contentTitle}>
+              CREATIFF <br />
+              {t('Header main title')}
             </div>
+
             <div className={styles.contentDescription}>
               Тут буде текст про те, яка в нас класна компанія, який в нас
               великий спектр послуг, та що прям зараз ви можете замовити роботу,

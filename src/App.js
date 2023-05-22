@@ -12,27 +12,27 @@ import axios from 'axios'
 function App() {
   const [response, setResponse] = React.useState(null)
 
-  React.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const token = 'a85209c71a4e401ed0e08eecf370c87c7b4bbb88'
-        const res = await axios.post(
-          'http://16.16.208.23:8000/multilingual-text/',
-          {
-            headers: {
-              Authorization: `Token ${token}`,
-              'Content-Type': 'application/json',
-            },
-          }
-        )
-        setResponse(res.data)
-      } catch (err) {
-        console.error(err)
-      }
-    }
+  // React.useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const token = 'a85209c71a4e401ed0e08eecf370c87c7b4bbb88'
+  //       const res = await axios.post(
+  //         'http://16.16.208.23:8000/multilingual-text/',
+  //         {
+  //           headers: {
+  //             Authorization: `Token ${token}`,
+  //             'Content-Type': 'application/json',
+  //           },
+  //         }
+  //       )
+  //       setResponse(res.data)
+  //     } catch (err) {
+  //       console.error(err)
+  //     }
+  //   }
 
-    fetchData()
-  }, [])
+  //   fetchData()
+  // }, [])
 
   return (
     <div>

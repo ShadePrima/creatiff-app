@@ -47,6 +47,7 @@ const ContactForm = () => {
           headers: {
             Authorization: `Token ${token}`,
             'Content-Type': 'application/json',
+            Referer: window.location.href,
           },
         }
       )

@@ -18,7 +18,7 @@ const ContactForm = () => {
     message: '',
   })
 
-  console.log(form, 'form')
+  // console.log(form, 'form')
 
   useEffect(() => {
     AOS.init()

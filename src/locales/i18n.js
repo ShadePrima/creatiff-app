@@ -5,14 +5,19 @@ import { initReactI18next } from 'react-i18next'
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
+  // en: {
+  //   translation: {
+  //     'Header main title': 'We do everything',
+  //   },
+  // },
+  // uk: {
+  //   translation: {
+  //     'Header main title': 'Ми робимо все',
+  //   },
+  // },
   en: {
     translation: {
-      'Header main title': 'We do everything',
-    },
-  },
-  uk: {
-    translation: {
-      'Header main title': 'Ми робимо все',
+      1: 'some content',
     },
   },
 }

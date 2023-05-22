@@ -10,29 +10,26 @@ import Footer from './components/Footer'
 import axios from 'axios'
 
 function App() {
-  const [response, setResponse] = React.useState(null)
+  const [translate, setTranslate] = React.useState({})
 
-  // React.useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const token = 'a85209c71a4e401ed0e08eecf370c87c7b4bbb88'
-  //       const res = await axios.post(
-  //         'http://16.16.208.23:8000/multilingual-text/',
-  //         {
-  //           headers: {
-  //             Authorization: `Token ${token}`,
-  //             'Content-Type': 'application/json',
-  //           },
-  //         }
-  //       )
-  //       setResponse(res.data)
-  //     } catch (err) {
-  //       console.error(err)
-  //     }
-  //   }
+  console.log(translate, 'translate')
 
-  //   fetchData()
-  // }, [])
+  React.useEffect(() => {
+    try {
+      const token = '88e021c16c9e26ef55cdae66219a2f81a6665534'
+
+      axios
+        .get('http://16.16.208.23:8000/translations/', {
+          headers: {
+            Authorization: `Token ${token}`,
+          },
+        })
+        .then((res) => setTranslate(res.data))
+        .catch((err) => console.log(err))
+    } catch (err) {
+      console.log(err)
+    }
+  }, [])
 
   return (
     <div>

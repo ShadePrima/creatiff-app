@@ -54,7 +54,7 @@ const HeaderContent = () => {
             </div> */}
             <div className={styles.contentTitle}>
               CREATIFF <br />
-              {t('Header main title')}
+              {t('1')}
             </div>
 
             <div className={styles.contentDescription}>
